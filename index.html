@@ -107,6 +107,15 @@
             color: #666;
             font-weight: 500;
             border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .hero-photo,
+        .modal-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .about {
@@ -243,6 +252,14 @@
             font-weight: 500;
             border-radius: 14px;
             margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .modal-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         #modalDescription p {
@@ -351,7 +368,7 @@
             <h2>UX-designer og bachelorstudent ved NTNU Gjøvik</h2>
         </div>
         <div class="photo-placeholder">
-            Bilde kommer snart
+            <img src="solveig-aanderaa.jpg" alt="Solveig Aanderaa" class="hero-photo">
         </div>
     </section>
 
@@ -392,7 +409,7 @@
     <div class="modal-overlay" id="projectModal" aria-hidden="true">
         <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
             <button class="modal-close" aria-label="Lukk prosjektvindu">&times;</button>
-            <div class="modal-image">Bilde kommer snart</div>
+            <div class="modal-image"><img src="solveig-aanderaa.jpg" alt="Solveig Aanderaa" class="modal-photo"></div>
             <h3 id="modalTitle"></h3>
             <div id="modalDescription"></div>
         </div>
