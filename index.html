@@ -19,7 +19,21 @@
     <ul class="navbar__nav" role="list">
       <li><a href="#hjem">Hjem</a></li>
       <li><a href="#om">Om meg</a></li>
-      <li><a href="#prosjekter">Prosjekter</a></li>
+      <li class="nav-item--sub">
+        <a href="#prosjekter">
+          Prosjekter
+          <span class="nav-chevron" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 3 5 7 8 3"/></svg>
+          </span>
+        </a>
+        <div class="nav-sub">
+          <div class="nav-sub__inner">
+            <a href="gjovikstranda.html">En digital Gjøvikstranda</a>
+            <a href="helseinn.html">Læringsapp – HelseINN</a>
+            <a href="ntnusammen.html">ntnuSammen</a>
+          </div>
+        </div>
+      </li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
     <button class="navbar__hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false">
@@ -96,6 +110,79 @@
         </div>
       </div>
       <a href="CV.pdf" target="_blank" rel="noopener" class="btn btn--dark fade-in">Last ned CV</a>
+
+      <!-- INTERESSER -->
+      <div style="margin-top: 4rem;">
+        <h3 class="about__col-title fade-in" style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-dark); margin-bottom:1.5rem;">Interesser</h3>
+        <div class="interests-grid">
+
+          <div class="interest-card fade-in">
+            <div class="interest-card__icon">
+              <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="8,82 47,22 86,82"/>
+                <polyline points="44,82 63,52 82,82"/>
+                <line x1="5" y1="82" x2="95" y2="82"/>
+                <polyline points="38,46 47,22 56,46"/>
+                <circle cx="78" cy="22" r="7" fill="currentColor" opacity="0.15" stroke="currentColor"/>
+              </svg>
+            </div>
+            <h3>Friluftsliv</h3>
+            <p>Turer i skog og fjell, frisk luft og tid i naturen.</p>
+          </div>
+
+          <div class="interest-card fade-in">
+            <div class="interest-card__icon">
+              <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24,52 Q22,78 50,78 Q78,78 76,52 Z"/>
+                <rect x="18" y="46" width="64" height="9" rx="4"/>
+                <path d="M24,52 Q12,49 14,37"/>
+                <path d="M76,52 Q88,49 86,37"/>
+                <path d="M20,46 Q50,34 80,46"/>
+                <circle cx="50" cy="34" r="6"/>
+                <path d="M34,32 Q31,22 34,14" opacity="0.5"/>
+                <path d="M50,32 Q47,22 50,14" opacity="0.5"/>
+                <path d="M66,32 Q63,22 66,14" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3>Matlaging</h3>
+            <p>Eksperimentering på kjøkkenet og gleden av gode måltider.</p>
+          </div>
+
+          <div class="interest-card fade-in">
+            <div class="interest-card__icon">
+              <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="50" cy="62" r="26"/>
+                <path d="M32,46 Q50,37 68,62"/>
+                <path d="M27,60 Q43,50 70,58"/>
+                <path d="M32,74 Q49,82 66,63"/>
+                <line x1="36" y1="36" x2="41" y2="54"/>
+                <line x1="59" y1="54" x2="64" y2="36"/>
+                <circle cx="35" cy="32" r="4" fill="currentColor" opacity="0.6"/>
+                <circle cx="65" cy="32" r="4" fill="currentColor" opacity="0.6"/>
+              </svg>
+            </div>
+            <h3>Strikking</h3>
+            <p>Kreativt håndarbeid – fra nøste til ferdige plagg.</p>
+          </div>
+
+          <div class="interest-card fade-in">
+            <div class="interest-card__icon">
+              <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="10" y="34" width="80" height="52" rx="8"/>
+                <path d="M30,34 L33,20 L58,20 L61,34"/>
+                <circle cx="50" cy="60" r="16"/>
+                <circle cx="50" cy="60" r="9"/>
+                <circle cx="44" cy="53" r="3" fill="currentColor" opacity="0.2"/>
+                <circle cx="76" cy="28" r="5"/>
+                <rect x="14" y="40" width="12" height="7" rx="2" fill="currentColor" opacity="0.15"/>
+              </svg>
+            </div>
+            <h3>Fotografering</h3>
+            <p>Å fange stemninger og øyeblikk gjennom kameralinsen.</p>
+          </div>
+
+        </div>
+      </div>
     </div>
   </section>
 

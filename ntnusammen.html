@@ -8,18 +8,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>:root { --project-accent: #EAF5E6; }</style>
+  <style>
+    :root {
+      --project-accent: #EAF5E6;
+      --diamond-fill: #5aaa60;
+    }
+  </style>
 </head>
 <body>
 
   <nav class="navbar" id="navbar">
-    <a href="index.html" class="navbar__logo">
-      <img src="images/logo.png" alt="Solveig Aanderaa">
-    </a>
+    <a href="index.html" class="navbar__logo"><img src="images/logo.png" alt="Solveig Aanderaa"></a>
     <ul class="navbar__nav" role="list">
       <li><a href="index.html">Hjem</a></li>
       <li><a href="index.html#om">Om meg</a></li>
-      <li><a href="index.html#prosjekter">Prosjekter</a></li>
+      <li class="nav-item--sub">
+        <a href="index.html#prosjekter">
+          Prosjekter
+          <span class="nav-chevron" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 3 5 7 8 3"/></svg>
+          </span>
+        </a>
+        <div class="nav-sub">
+          <div class="nav-sub__inner">
+            <a href="gjovikstranda.html">En digital Gjøvikstranda</a>
+            <a href="helseinn.html">Læringsapp – HelseINN</a>
+            <a href="ntnusammen.html">ntnuSammen</a>
+          </div>
+        </div>
+      </li>
       <li><a href="index.html#kontakt">Kontakt</a></li>
     </ul>
     <button class="navbar__hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false">
@@ -69,56 +86,117 @@
   </div>
 
   <div class="project-body">
+
     <h2>Om prosjektet</h2>
-    <p>
-      ntnuSammen er en sosial applikasjon designet for å hjelpe studenter ved NTNU Gjøvik med å finne
-      medstudenter, aktiviteter og fellesskap på campus. Prosjektet adresserte ensomhet og sosial
-      isolasjon blant nye studenter.
-    </p>
-    <p>
-      [Mer beskrivelse kommer her. Dette er plassholdertekst som vil bli erstattet med faktisk prosjektinnhold.]
-    </p>
+    <p>ntnuSammen er en sosial applikasjon designet for å hjelpe studenter ved NTNU Gjøvik med å finne medstudenter, aktiviteter og fellesskap på campus. Prosjektet adresserte ensomhet og sosial isolasjon blant nye studenter.</p>
+    <p>[Mer prosjektbeskrivelse kommer her. Dette er plassholdertekst.]</p>
 
     <h2>Problemstilling</h2>
-    <p>
-      Hvordan kan vi designe en digital løsning som senker terskelen for sosial interaksjon blant studenter
-      ved NTNU Gjøvik, og bidrar til at flere føler seg inkludert i studentmiljøet?
-    </p>
+    <p>Hvordan kan vi designe en digital løsning som senker terskelen for sosial interaksjon blant studenter ved NTNU Gjøvik, og bidrar til at flere føler seg inkludert i studentmiljøet?</p>
 
     <h2>Løsning</h2>
-    <p>
-      [Beskrivelse av løsningen kommer her. Plassholdertekst som vil bli erstattet med faktisk innhold om hva
-      gruppen designet og hvorfor.]
-    </p>
+    <p>[Beskrivelse av løsningen kommer her. Plassholdertekst som vil bli erstattet med faktisk innhold om hva gruppen designet og hvorfor.]</p>
 
-    <h2>Prosess</h2>
-    <div class="project-phases">
-      <div class="project-phase fade-in">
-        <div class="project-phase__top"></div>
-        <div class="project-phase__icon" style="color: #3a6b3a;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <!-- PROSESS -->
+    <div class="process-section">
+      <h2>Prosess</h2>
+
+      <div class="dd-wrap">
+        <svg class="dd-svg" viewBox="0 0 740 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon points="30,80 200,10 200,150" fill="var(--diamond-fill)" opacity="0.35"/>
+          <polygon points="200,10 370,80 200,150" fill="var(--diamond-fill)" opacity="0.72"/>
+          <polygon points="370,80 540,10 540,150" fill="var(--diamond-fill)" opacity="0.35"/>
+          <polygon points="540,10 710,80 540,150" fill="var(--diamond-fill)" opacity="0.72"/>
+          <circle cx="30" cy="80" r="5" fill="var(--diamond-fill)"/>
+          <circle cx="200" cy="10" r="5" fill="var(--diamond-fill)"/>
+          <circle cx="200" cy="150" r="5" fill="var(--diamond-fill)"/>
+          <circle cx="370" cy="80" r="5" fill="var(--diamond-fill)"/>
+          <circle cx="540" cy="10" r="5" fill="var(--diamond-fill)"/>
+          <circle cx="540" cy="150" r="5" fill="var(--diamond-fill)"/>
+          <circle cx="710" cy="80" r="5" fill="var(--diamond-fill)"/>
+        </svg>
+        <div class="dd-labels">
+          <span>Discover</span>
+          <span>Define</span>
+          <span>Develop</span>
+          <span>Deliver</span>
         </div>
-        <h3>Innsikt</h3>
-        <p>Spørreundersøkelser og intervjuer med studenter om sosiale utfordringer, ensomhet og ønsker for studentlivet på campus.</p>
       </div>
-      <div class="project-phase fade-in">
-        <div class="project-phase__top"></div>
-        <div class="project-phase__icon" style="color: #3a6b3a;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>
+
+      <!-- Discover -->
+      <div class="process-item fade-in">
+        <div class="process-item__text">
+          <span class="process-num">01</span>
+          <h3 class="process-title">Discover</h3>
+          <ul class="process-methods">
+            <li>Spørreundersøkelse blant studenter</li>
+            <li>Brukerintervjuer</li>
+            <li>Kontekstuell undersøkelse</li>
+            <li>Desk research om sosial teknologi</li>
+          </ul>
+          <p class="process-result">[Placeholder: Hva lærte vi om sosial ensomhet og behovene til studenter på campus?]</p>
         </div>
-        <h3>Idéutvikling</h3>
-        <p>Idémyldring rundt funksjoner, informasjonsarkitektur og brukerstrømmer. Evaluering av konsepter med potensielle brukere.</p>
-      </div>
-      <div class="project-phase fade-in">
-        <div class="project-phase__top"></div>
-        <div class="project-phase__icon" style="color: #3a6b3a;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        <div class="process-item__visual" aria-hidden="true">
+          <span class="process-visual-num">01</span>
         </div>
-        <h3>Prototyping</h3>
-        <p>Utvikling av interaktiv prototype i Figma med brukertesting på studenter. Iterasjon og raffinering av designet.</p>
       </div>
-    </div>
-  </div>
+
+      <!-- Define -->
+      <div class="process-item process-item--reverse fade-in">
+        <div class="process-item__text">
+          <span class="process-num">02</span>
+          <h3 class="process-title">Define</h3>
+          <ul class="process-methods">
+            <li>Affinitetsdiagram</li>
+            <li>Personas</li>
+            <li>How Might We</li>
+            <li>Designprinsipper</li>
+          </ul>
+          <p class="process-result">[Placeholder: Hvilken kjerneutfordring valgte vi å fokusere på, og hvilke designprinsipper styrte arbeidet?]</p>
+        </div>
+        <div class="process-item__visual" aria-hidden="true">
+          <span class="process-visual-num">02</span>
+        </div>
+      </div>
+
+      <!-- Develop -->
+      <div class="process-item fade-in">
+        <div class="process-item__text">
+          <span class="process-num">03</span>
+          <h3 class="process-title">Develop</h3>
+          <ul class="process-methods">
+            <li>Idémyldring</li>
+            <li>Informasjonsarkitektur</li>
+            <li>Lo-fi wireframes</li>
+            <li>Konseptevaluering</li>
+          </ul>
+          <p class="process-result">[Placeholder: Hvilke funksjoner og konsepter ble utforsket, og hva ble tatt videre?]</p>
+        </div>
+        <div class="process-item__visual" aria-hidden="true">
+          <span class="process-visual-num">03</span>
+        </div>
+      </div>
+
+      <!-- Deliver -->
+      <div class="process-item process-item--reverse fade-in">
+        <div class="process-item__text">
+          <span class="process-num">04</span>
+          <h3 class="process-title">Deliver</h3>
+          <ul class="process-methods">
+            <li>Hi-fi prototype i Figma</li>
+            <li>Brukertesting med studenter</li>
+            <li>Iterasjon og raffinering</li>
+            <li>Presentasjon for NTNU</li>
+          </ul>
+          <p class="process-result">[Placeholder: Hva ble det endelige resultatet og hvilke innsikter fikk vi fra brukertestingen?]</p>
+        </div>
+        <div class="process-item__visual" aria-hidden="true">
+          <span class="process-visual-num">04</span>
+        </div>
+      </div>
+
+    </div><!-- /process-section -->
+  </div><!-- /project-body -->
 
   <footer class="footer">
     <p class="footer__copy">© 2026 Solveig Aanderaa</p>
