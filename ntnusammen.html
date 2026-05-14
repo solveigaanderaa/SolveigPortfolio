@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ntnuSammen – Solveig Aanderaa</title>
+  <title>NTNUconnect – Solveig Aanderaa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
     :root {
-      --project-accent: #EAF5E6;
-      --diamond-fill: #5aaa60;
+      --project-accent: #1C5399;
+      --diamond-fill: #1C5399;
     }
   </style>
 </head>
 <body>
 
-  <nav class="navbar" id="navbar">
+  <nav class="navbar navbar--project" id="navbar">
     <a href="index.html" class="navbar__logo"><img src="images/logo.png" alt="Solveig Aanderaa"></a>
     <ul class="navbar__nav" role="list">
       <li><a href="index.html">Hjem</a></li>
@@ -33,7 +33,7 @@
           <div class="nav-sub__inner">
             <a href="gjovikstranda.html">En digital Gjøvikstranda</a>
             <a href="helseinn.html">Læringsapp – HelseINN</a>
-            <a href="ntnusammen.html">ntnuSammen</a>
+            <a href="ntnusammen.html">NTNUconnect</a>
           </div>
         </div>
       </li>
@@ -51,11 +51,11 @@
   </nav>
 
   <header class="project-hero">
-    <img class="project-hero__img" src="images/ntnuConnect.png" alt="ntnuSammen prosjekt">
+    <img class="project-hero__img" src="images/NTNUconnect.png" alt="NTNUconnect prosjekt">
     <div class="project-hero__overlay"></div>
     <div class="project-hero__content">
       <p class="project-hero__label">Sosial app · Studenter</p>
-      <h1 class="project-hero__title">ntnuSammen</h1>
+      <h1 class="project-hero__title">NTNUconnect</h1>
     </div>
   </header>
 
@@ -73,29 +73,60 @@
     </div>
     <div class="project-meta__item">
       <p class="project-meta__label">Fag</p>
-      <p class="project-meta__value">Interaksjonsdesign 1</p>
+      <p class="project-meta__value">Informasjonsarkitektur</p>
     </div>
     <div class="project-meta__item">
       <p class="project-meta__label">Varighet</p>
-      <p class="project-meta__value">Januar – Juni 2024</p>
+      <p class="project-meta__value">August – November 2024</p>
     </div>
     <div class="project-meta__item">
       <p class="project-meta__label">Gruppemedlemmer</p>
-      <p class="project-meta__value">Solveig Aanderaa, [navn], [navn]</p>
+      <p class="project-meta__value">4 (2 interkasjonsdesignere, 2 grafisk designere)</p>
     </div>
   </div>
 
   <div class="project-body">
 
     <h2>Om prosjektet</h2>
-    <p>ntnuSammen er en sosial applikasjon designet for å hjelpe studenter ved NTNU Gjøvik med å finne medstudenter, aktiviteter og fellesskap på campus. Prosjektet adresserte ensomhet og sosial isolasjon blant nye studenter.</p>
-    <p>[Mer prosjektbeskrivelse kommer her. Dette er plassholdertekst.]</p>
+    <p>På NTNU i Gjøvik finnes det en rekke linjeforeninger og studentforeninger. 
+      Linjeforeningene er tilknyttet de ulike studieprogrammene, og alle studenter 
+      er derfor automatisk medlemmer. Dette innebærer imidlertid ikke nødvendigvis 
+      at studentene er aktive medlemmer eller får med seg informasjon og arrangementer 
+      som blir annonsert.
+    </p>
 
     <h2>Problemstilling</h2>
-    <p>Hvordan kan vi designe en digital løsning som senker terskelen for sosial interaksjon blant studenter ved NTNU Gjøvik, og bidrar til at flere føler seg inkludert i studentmiljøet?</p>
+    <p>UKA som er en av studentforeningene, trenger et bedre kommunikasjonssystem, 
+      en enklere måte å komme i kontakt med sponsorer på og flere frivillige. I tillegg 
+      er det flere generelle utfordringer mellom kommunikasjonen for studentforeningene 
+      og studentene. Foreningene på NTNU bruker flere ulike plattformer for informasjonsdeling, 
+      noe som kan føre til at studenter går glipp av arrangementer, ikke får med deg viktig 
+      informasjon i tillegg til at det er tidkrevende å måtte følge med på flere kanaler 
+    </p>
 
     <h2>Løsning</h2>
-    <p>[Beskrivelse av løsningen kommer her. Plassholdertekst som vil bli erstattet med faktisk innhold om hva gruppen designet og hvorfor.]</p>
+    <p>NTNUconnect er en digital plattform hvor studenter kan finne alt av informasjon
+      fra de ulike foreningene, hvilke arrangementer de skal arrangere videre, en egen
+      kalender for hver av foreningene, en stor felleskalender for alle foreningene og
+      en chat funksjon for å kunne kommunisere. Slik blir det enklere for både studentene
+      og foreningene å kommunisere og holde kontakten gjennom én plattform.
+    </p>
+
+    <!-- FIGMA PROTOTYPE -->
+    <div class="proto-duo">
+      <div class="proto-duo__laptop">
+        <div class="proto-frame">
+          <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/WGVKhGnV3xgrc4Tp7TMNXy/Prototype-IA?node-id=106-5292&t=n5tpozwvq9nay3XX-0" width="100%" height="520" allowfullscreen></iframe>
+        </div>
+        <a href="https://www.figma.com/proto/WGVKhGnV3xgrc4Tp7TMNXy/Prototype-IA?node-id=106-5292&t=n5tpozwvq9nay3XX-0" target="_blank" rel="noopener" class="btn btn--dark proto-btn">Åpne desktop i Figma</a>
+      </div>
+      <div class="proto-duo__phone">
+        <div class="proto-frame">
+          <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/WGVKhGnV3xgrc4Tp7TMNXy/Prototype-IA?node-id=47-3941&t=n5tpozwvq9nay3XX-0" width="100%" height="580" allowfullscreen></iframe>
+        </div>
+        <a href="https://www.figma.com/proto/WGVKhGnV3xgrc4Tp7TMNXy/Prototype-IA?node-id=47-3941&t=n5tpozwvq9nay3XX-0" target="_blank" rel="noopener" class="btn btn--dark proto-btn">Åpne mobil i Figma</a>
+      </div>
+    </div>
 
     <!-- PROSESS -->
     <div class="process-section">
@@ -116,79 +147,123 @@
           <circle cx="710" cy="80" r="5" fill="var(--diamond-fill)"/>
         </svg>
         <div class="dd-labels">
-          <span>Discover</span>
-          <span>Define</span>
-          <span>Develop</span>
-          <span>Deliver</span>
+          <span>Utforske</span>
+          <span>Definere</span>
+          <span>Utvikle</span>
+          <span>Teste</span>
         </div>
       </div>
 
-      <!-- Discover -->
+      <!-- Utforske -->
       <div class="process-item fade-in">
         <div class="process-item__text">
           <span class="process-num">01</span>
-          <h3 class="process-title">Discover</h3>
+          <h3 class="process-title">Utforske</h3>
           <ul class="process-methods">
-            <li>Spørreundersøkelse blant studenter</li>
-            <li>Brukerintervjuer</li>
-            <li>Kontekstuell undersøkelse</li>
-            <li>Desk research om sosial teknologi</li>
+            <li>Intervju</li>
           </ul>
-          <p class="process-result">[Placeholder: Hva lærte vi om sosial ensomhet og behovene til studenter på campus?]</p>
+          <p class="process-result">I startfasen av prosjektet fikk gruppene en 
+            oversikt alle student- og linjeforeningene på NTNU, og ble bedt om å 
+            velge en til intervju. Vårt valg falt på musikkfestivalen UKA da det 
+            er en forening vi alle var engasjerte i. I intervjuet med ett tidligere 
+            styremedlem i UKA kom det fram at de behøver et bedre kommunikasjonssystem, 
+            å kunne enklere komme i kontakt med sponsorer og behov for flere frivillige. 
+            Denne innsikten ble inkludert i det felles dokumentet for hele klassen med de 
+            resterende linjeforenings intervjuene. 
+          </p>
         </div>
         <div class="process-item__visual" aria-hidden="true">
           <span class="process-visual-num">01</span>
         </div>
       </div>
 
-      <!-- Define -->
+      <!-- Definere -->
       <div class="process-item process-item--reverse fade-in">
         <div class="process-item__text">
           <span class="process-num">02</span>
-          <h3 class="process-title">Define</h3>
+          <h3 class="process-title">Definere</h3>
           <ul class="process-methods">
             <li>Affinitetsdiagram</li>
             <li>Personas</li>
-            <li>How Might We</li>
-            <li>Designprinsipper</li>
+            <li>Scenarier</li>
+            <li>Storyboard</li>
           </ul>
-          <p class="process-result">[Placeholder: Hvilken kjerneutfordring valgte vi å fokusere på, og hvilke designprinsipper styrte arbeidet?]</p>
+          <p class="process-result">Etter fullført intervju med alle foreningene på 
+            skolen lagde vi et affinitymap med alle svarene for å kunne dele inn i 
+            de kategoriene vi mente var mest relevant. Samlet sett var de mest 
+            sentrale behovene en plattform for enkel kommunikasjon mellom forening 
+            og student, tilbakemeldingsfunksjon samt bedre rekrutteringssystem. 
+            Med dette som utgangspunkt utviklet vi fire ulike personas med forskjellige 
+            roller og behov. For å kunne analysere situasjonen fra flere sider ga vi 
+            personasene disse rollene: ett styremedlem, to studentrepresentanter og 
+            en student. Videre ble de tilhørende scenarioer illustrert gjennom storyboard. 
+          </p>
         </div>
-        <div class="process-item__visual" aria-hidden="true">
-          <span class="process-visual-num">02</span>
+        <div class="carousel">
+          <div class="carousel__slides">
+            <div class="carousel__slide active"><img src="images/NTNUconnect/fase%202/Affinitydiagram.jpeg" alt="Affinitetsdiagram" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%202/Personas%201.png" alt="Persona 1" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%202/Personas%202.png" alt="Persona 2" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%202/Personas%203.png" alt="Persona 3" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%202/Personas%204.png" alt="Persona 4" loading="lazy"></div>
+          </div>
+          <button class="carousel__btn carousel__btn--prev" aria-label="Forrige bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <button class="carousel__btn carousel__btn--next" aria-label="Neste bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
+          <p class="carousel__caption">Affinitetsdiagram</p>
         </div>
       </div>
 
-      <!-- Develop -->
+      <!-- Utvikle -->
       <div class="process-item fade-in">
         <div class="process-item__text">
           <span class="process-num">03</span>
-          <h3 class="process-title">Develop</h3>
+          <h3 class="process-title">Utvikle</h3>
           <ul class="process-methods">
-            <li>Idémyldring</li>
-            <li>Informasjonsarkitektur</li>
-            <li>Lo-fi wireframes</li>
-            <li>Konseptevaluering</li>
+            <li>Sitemap</li>
+            <li>Low fidelity wireframes</li>
+            <li>High fidelity prototype</li>
           </ul>
-          <p class="process-result">[Placeholder: Hvilke funksjoner og konsepter ble utforsket, og hva ble tatt videre?]</p>
+          <p class="process-result">Vi har nå konkludert med at en app vil være den mest gunstige måten 
+            for å samle informasjon. Vi benyttet oss da av sitemap for å strukturere innholdet på appen. 
+            Denne hadde flere iterasjoner til vi til sutt kom fram til disse kategoriene som hovednavigasjon: 
+            linjeforeninger, studentforeninger og en felles kalender. Trykker man seg videre på foreningene 
+            får man en egen kalender for foreningen samt generell informasjon og muligheten for chat. 
+            Til slutt designet vi enkle wireframes, som senere ble til en high fidelity prototype. I tillegg 
+            ble det utviklet en desginmanual med logo, farger og fonten. Vi fikk beskjed om at kun sidene på 
+            prototypen som vises i scenarioet skulle designes, som er grunnen til at man ikke får sett hele løsningen. 
+          </p>
         </div>
-        <div class="process-item__visual" aria-hidden="true">
-          <span class="process-visual-num">03</span>
+        <div class="carousel">
+          <div class="carousel__slides">
+            <div class="carousel__slide active"><img src="images/NTNUconnect/fase%203/SItemap.jpeg" alt="Sitemap" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/Wireframes%20pc%201.png" alt="Wireframes – PC (1)" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/wireframes%20pc%202.png" alt="Wireframes – PC (2)" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/wireframes%20pc%203.png" alt="Wireframes – PC (3)" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/wireframes%20pc%204.png" alt="Wireframes – PC (4)" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/wireframes%20pc%205.png" alt="Wireframes – PC (5)" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/wireframes%20mobil%201.png" alt="Wireframes – mobil (1)" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/wireframes%20mobil%202.png" alt="Wireframes – mobil (2)" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/wireframes%20mobil%203.png" alt="Wireframes – mobil (3)" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/wireframes%20mobil%204.png" alt="Wireframes – mobil (4)" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/wireframes%20mobil%205.png" alt="Wireframes – mobil (5)" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/storyboard%20desktop.png" alt="Storyboard – desktop" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/storyboard%20telefon.png" alt="Storyboard – telefon" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/Logo.png" alt="Logoen vi utviklet" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/Skjermbilde%202026-05-14%20kl.%2018.24.30.png" alt="High fidelity PC" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/NTNUconnect/fase%203/Skjermbilde%202026-05-14%20kl.%2018.25.14.png" alt="High fidelity mobil" loading="lazy"></div>
+          </div>
+          <button class="carousel__btn carousel__btn--prev" aria-label="Forrige bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <button class="carousel__btn carousel__btn--next" aria-label="Neste bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
+          <p class="carousel__caption">Sitemap</p>
         </div>
       </div>
 
-      <!-- Deliver -->
+      <!-- Teste -->
       <div class="process-item process-item--reverse fade-in">
         <div class="process-item__text">
           <span class="process-num">04</span>
-          <h3 class="process-title">Deliver</h3>
-          <ul class="process-methods">
-            <li>Hi-fi prototype i Figma</li>
-            <li>Brukertesting med studenter</li>
-            <li>Iterasjon og raffinering</li>
-            <li>Presentasjon for NTNU</li>
-          </ul>
-          <p class="process-result">[Placeholder: Hva ble det endelige resultatet og hvilke innsikter fikk vi fra brukertestingen?]</p>
+          <h3 class="process-title">Teste</h3>
+          <p class="process-result">Brukertesting var ikke en del av dette emnet og prosjektet. </p>
         </div>
         <div class="process-item__visual" aria-hidden="true">
           <span class="process-visual-num">04</span>
@@ -196,6 +271,11 @@
       </div>
 
     </div><!-- /process-section -->
+
+    <h2>Refleksjoner</h2>
+    <p>[Placeholder: Hvilke utfordringer møtte vi underveis i prosjektet, og hva fikk vi ikke gjennomført slik vi hadde planlagt?]</p>
+    <p>[Placeholder: Hva lærte vi av dette prosjektet – faglig, metodisk og som gruppe? Innhold kommer her.]</p>
+
   </div><!-- /project-body -->
 
   <footer class="footer">

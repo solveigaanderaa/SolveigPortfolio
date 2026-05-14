@@ -11,13 +11,13 @@
   <style>
     :root {
       --project-accent: #78947C;
-      --diamond-fill: #5d7d62;
+      --diamond-fill: #78947C;
     }
   </style>
 </head>
 <body>
 
-  <nav class="navbar" id="navbar">
+  <nav class="navbar navbar--project" id="navbar">
     <a href="index.html" class="navbar__logo"><img src="images/logo.png" alt="Solveig Aanderaa"></a>
     <ul class="navbar__nav" role="list">
       <li><a href="index.html">Hjem</a></li>
@@ -33,7 +33,7 @@
           <div class="nav-sub__inner">
             <a href="gjovikstranda.html">En digital Gjøvikstranda</a>
             <a href="helseinn.html">Læringsapp – HelseINN</a>
-            <a href="ntnusammen.html">ntnuSammen</a>
+            <a href="ntnusammen.html">NTNUconnect</a>
           </div>
         </div>
       </li>
@@ -54,7 +54,7 @@
     <img class="project-hero__img" src="images/Gjøvikstranda.png" alt="Gjøvikstranda prosjekt">
     <div class="project-hero__overlay"></div>
     <div class="project-hero__content">
-      <p class="project-hero__label">UX-design · Informasjonsarkitektur</p>
+      <p class="project-hero__label">UX-design</p>
       <h1 class="project-hero__title">En digital Gjøvikstranda</h1>
     </div>
   </header>
@@ -73,7 +73,7 @@
     </div>
     <div class="project-meta__item">
       <p class="project-meta__label">Fag</p>
-      <p class="project-meta__value">Interaksjonsdesign 3</p>
+      <p class="project-meta__value">Bacheloroppgave</p>
     </div>
     <div class="project-meta__item">
       <p class="project-meta__label">Varighet</p>
@@ -81,21 +81,36 @@
     </div>
     <div class="project-meta__item">
       <p class="project-meta__label">Gruppemedlemmer</p>
-      <p class="project-meta__value">Solveig Aanderaa, [navn], [navn]</p>
+      <p class="project-meta__value">4 interaksjonsdesignere</p>
     </div>
   </div>
 
   <div class="project-body">
 
     <h2>Om prosjektet</h2>
-    <p>Gjøvikstranda er et populært friluftsområde i Gjøvik. Prosjektet tok sikte på å skape en informativ og brukervennlig digital løsning som gjenspeiler områdets kvaliteter og gjør det enklere for besøkende å planlegge turen.</p>
-    <p>[Mer prosjektbeskrivelse kommer her. Dette er plassholdertekst.]</p>
+    <p>Bacheloroppgave i samarbeid med Gjøvik kommune. Gjøvik kommune er i gang med å utvikle Gjøvikstranda om til et aktivitet og rekreasjonsområdet. Det de derimot frykter er at ikke folk kommer til å ta det i bruk.Gjennom spørreundersøkelser og grundig research har vi funnet ut at årsaken til at Gjøvikstranda blir mindre brukt av enkelte aldersgrupper, skyldes for lite tilgjengelig informasjon og ikke tilstrekkelig med synliggjøring av tilbudene. Da vi spurte dem hvor de hadde lett etter informasjon om Gjøvikstranda var svaret i all hovedsak på nett og sosiale medier, et sted ikke Gjøvikstranda befinner seg i dag.</p>
 
     <h2>Problemstilling</h2>
-    <p>Hvordan kan vi lage en digital plattform som formidler Gjøvikstranda på en engasjerende og tilgjengelig måte, og som møter behovene til både lokale og tilreisende brukere?</p>
+    <p>"Hvordan kan vi designe en brukervennlig digital løsning som gjør det enklere å finne relevant informasjon om Gjøvikstranda?"</p>
 
     <h2>Løsning</h2>
-    <p>[Beskrivelse av løsningen kommer her. Plassholdertekst som vil bli erstattet med faktisk innhold om hva gruppen designet og hvorfor.]</p>
+    <p>Målet med Gjøvikstranda.no er å gjøre det enkelt for brukere å få oversikt, finne aktiviteter og fasiliteter utforske området på en intuitiv måte. Hovedelementene på siden er basert på de mest omtalte temaene angående Gjøvikstranda, hos Gjøviks befolkning.</p>
+
+    <!-- FIGMA PROTOTYPE -->
+    <div class="proto-duo">
+      <div class="proto-duo__laptop">
+        <div class="proto-frame">
+          <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/bOX7MyZKhXK6rrNrVO91T0/Bachelor?node-id=64825-37293&t=unWfI1PQ5i6FRI11-1" width="100%" height="520" allowfullscreen></iframe>
+        </div>
+        <a href="https://www.figma.com/proto/bOX7MyZKhXK6rrNrVO91T0/Bachelor?node-id=64825-37293&t=unWfI1PQ5i6FRI11-1" target="_blank" rel="noopener" class="btn btn--dark proto-btn">Åpne desktop i Figma</a>
+      </div>
+      <div class="proto-duo__phone">
+        <div class="proto-frame">
+          <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/bOX7MyZKhXK6rrNrVO91T0/Bachelor?node-id=63858-33397&t=unWfI1PQ5i6FRI11-1" width="100%" height="580" allowfullscreen></iframe>
+        </div>
+        <a href="https://www.figma.com/proto/bOX7MyZKhXK6rrNrVO91T0/Bachelor?node-id=63858-33397&t=unWfI1PQ5i6FRI11-1" target="_blank" rel="noopener" class="btn btn--dark proto-btn">Åpne mobil i Figma</a>
+      </div>
+    </div>
 
     <!-- PROSESS -->
     <div class="process-section">
@@ -116,79 +131,146 @@
           <circle cx="710" cy="80" r="5" fill="var(--diamond-fill)"/>
         </svg>
         <div class="dd-labels">
-          <span>Discover</span>
-          <span>Define</span>
-          <span>Develop</span>
-          <span>Deliver</span>
+          <span>Uforske</span>
+          <span>Definere</span>
+          <span>Utvikle</span>
+          <span>Teste</span>
         </div>
       </div>
 
-      <!-- Discover -->
+      <!-- Utforske -->
       <div class="process-item fade-in">
         <div class="process-item__text">
           <span class="process-num">01</span>
-          <h3 class="process-title">Discover</h3>
+          <h3 class="process-title">Utforske</h3>
           <ul class="process-methods">
-            <li>Brukerintervjuer</li>
-            <li>Observasjon på stedet</li>
-            <li>Stedsanalyse</li>
-            <li>Heuristisk evaluering</li>
+            <li>Desk research</li>
+            <li>SWOT analyse</li>
+            <li>Spørreundersøkelse</li>
+            <li>Ekspertintervjuer</li>
           </ul>
-          <p class="process-result">[Placeholder: Kort oppsummering av viktige funn fra innsiktsfasen – hvem er brukerne og hva trenger de?]</p>
+          <p class="process-result">Etter en spørreundersøkelse gjort på innbyggere i Gjøvik fant vi ut 
+            at mange unge voksne ikke visste hva Gjøvikstranda var, og at de aller fleste 
+            hadde lett etter informasjon på internett, på kommunens sider eller spurt på rådhuset. 
+            Researchen vi fant viste at internettbruken hadde økt for alle aldersgruppene, inkludert de eldre. Her sto 
+            det også at rekreasjonsprosjekter burde benytte seg av internett som markedsføring, da du får et 
+            enda bredere publikum. De mest sentrale funnene fra spørreundersøkelsen baserte seg på at de som 
+            vet om Gjøvikstranda mener det trengs flere aktiviteter og fasiliteter, mens de som ikke kjenner 
+            til det mener det trengs bedre synliggjøring. I etterkant av ekspertintervjuene satt vi igjen med 
+            et inntrykk av viktigheten rundt brukerinnvolvering fra starten av et prosjekt og at det må både 
+            fysisk og digital promotering til for optimal synliggjøring.
+          </p>
         </div>
-        <div class="process-item__visual" aria-hidden="true">
-          <span class="process-visual-num">01</span>
+        <div class="carousel">
+          <div class="carousel__slides">
+            <div class="carousel__slide active"><img src="images/Gjøvikstranda/fase%201/spørreundersøkelse%20statistikk.png" alt="Statistikk fra spørreundersøkelse" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%201/swot.png" alt="SWOT-analyse" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%201/swot%20rangeringer.png" alt="Rangering av nettsidene fra SWOT analysen" loading="lazy"></div>
+          </div>
+          <button class="carousel__btn carousel__btn--prev" aria-label="Forrige bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <button class="carousel__btn carousel__btn--next" aria-label="Neste bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
+          <p class="carousel__caption">Statistikk fra spørreundersøkelse</p>
         </div>
       </div>
 
-      <!-- Define -->
+      <!-- Definere -->
       <div class="process-item process-item--reverse fade-in">
         <div class="process-item__text">
           <span class="process-num">02</span>
-          <h3 class="process-title">Define</h3>
+          <h3 class="process-title">Definere</h3>
           <ul class="process-methods">
             <li>Affinitetsdiagram</li>
             <li>Personas</li>
+            <li>Scenario</li>
             <li>Brukerreise</li>
-            <li>Problemdefinisjon</li>
+            <li>Iterasjoner av problemstillingen</li>
           </ul>
-          <p class="process-result">[Placeholder: Hvilke innsikter og problemstillinger ble valgt å fokusere på, og hvorfor?]</p>
+          <p class="process-result">Resultatet fra defineringsfasen var tre personas, 
+            én fra hver aldersgruppe, med egne behov og utfordringer. Disse hadde et eget 
+            scenario hver som gikk ut på å finne ønsket informasjon om Gjøvikstranda ved bruk av løsningen 
+            vår. For å illustrere hvordan det vil se ut å bruke vår løsning i praksis 
+            lagde vi tre brukerreiser tilhørende personasene. Dagens løsning  
+            fikk også en brukerreise fra ett av personasene for å demonstrere hvor tungvindt og 
+            utfordrende det er å finne riktig informasjon. Det er nå tydelig at Gjøvikstrands 
+            trenger sin egen nettside for å enkelt kunne finne informasjonen man trenger.</p>
         </div>
-        <div class="process-item__visual" aria-hidden="true">
-          <span class="process-visual-num">02</span>
+        <div class="carousel">
+          <div class="carousel__slides">
+            <div class="carousel__slide active"><img src="images/Gjøvikstranda/fase%202/Skjermbilde%202026-05-14%20kl.%2014.42.20.png" alt="Affinity map" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/Skjermbilde%202026-05-14%20kl.%2014.42.52.png" alt="Sortert innsikt fra affinity map" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/persona%201.png" alt="Persona Elisabeth" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/personas%202.png" alt="Persona Familien Nilsen" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/personas%203.png" alt="Persona Noah" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/brukerreise%203.png" alt="Brukerreise Elisabeth" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/brukerreise%201.png" alt="Brukerreise familien Nilsen" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/brukerreise%202.png" alt="Brukerreise Noah" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/brukerrreise%20nå.png" alt="Brukerreise – nåsituasjon" loading="lazy"></div>
+          </div>
+          <button class="carousel__btn carousel__btn--prev" aria-label="Forrige bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <button class="carousel__btn carousel__btn--next" aria-label="Neste bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
+          <p class="carousel__caption">Affinitymap</p>
         </div>
       </div>
 
-      <!-- Develop -->
+      <!-- Utvikle -->
       <div class="process-item fade-in">
         <div class="process-item__text">
           <span class="process-num">03</span>
-          <h3 class="process-title">Develop</h3>
+          <h3 class="process-title">Utvikle</h3>
           <ul class="process-methods">
-            <li>Idémyldring</li>
-            <li>Lo-fi skisser</li>
-            <li>Informasjonsarkitektur</li>
-            <li>Komponentbibliotek</li>
+            <li>Moodboard</li>
+            <li>Crazy 4</li>
+            <li>MoSCoW</li>
+            <li>Sitemap</li>
+            <li>Wireframes</li>
+            <li>Low fidelity prototype</li>
+            <li>High fidelity prototype</li>
           </ul>
-          <p class="process-result">[Placeholder: Hvilke konsepter ble utforsket, og hva ble tatt videre til prototyping?]</p>
+          <p class="process-result">Etter idegenerering utviklet vi et 
+            sitemap for nettsiden vår. Hovednavigeringen tar utgangspunkt i en rapport utviklet 
+            av Gjøvikstranda etter en brukermerviknings-workshop med innbyggere fra Gjøvik. 
+            Se sitemappet for de mest omtalte temaene som la grunnlag for innholdet. Videre 
+            genererte vi wireframes med vår egen forenklede variant av crazy 8, crazy 4. 
+            Wireframes ble til low fidelity prototype, som ble til en fungerende high 
+            fidelity prototype, både for desktop og mobil. Vi mottok en designmanual 
+            fra designbyrået Frostrøyk som la grunnlaget for designvalgene i løsningen.
+          </p>
         </div>
-        <div class="process-item__visual" aria-hidden="true">
-          <span class="process-visual-num">03</span>
+        <div class="carousel">
+          <div class="carousel__slides">
+            <div class="carousel__slide active"><img src="images/Gjøvikstranda/fase%203/sitemap.png" alt="Sitemap" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/moscow.png" alt="MoSCoW-analyse" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/Homepage-1.png" alt="Wireframes forside" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/Homepage.png" alt="Wireframes underside" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/underside.png" alt="Wireframes underside" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/moodboard.png" alt="Moodboard" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/Skjermbilde%202026-05-14%20kl.%2015.09.04.png" alt="Low fidelity prototype" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/Skjermbilde%202026-05-14%20kl.%2015.09.39.png" alt="Low fidelity prototype" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/High%20fidelity%20-%20Desktop.png" alt="High fidelity – desktop" loading="lazy"></div>
+            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/High%20fidelity%20-%20Phone.png" alt="High fidelity – mobil" loading="lazy"></div>
+          </div>
+          <button class="carousel__btn carousel__btn--prev" aria-label="Forrige bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <button class="carousel__btn carousel__btn--next" aria-label="Neste bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
+          <p class="carousel__caption">Sitemap</p>
         </div>
       </div>
 
-      <!-- Deliver -->
+      <!-- Teste -->
       <div class="process-item process-item--reverse fade-in">
         <div class="process-item__text">
           <span class="process-num">04</span>
-          <h3 class="process-title">Deliver</h3>
+          <h3 class="process-title">Teste</h3>
           <ul class="process-methods">
-            <li>Hi-fi prototype i Figma</li>
             <li>Brukertesting</li>
-            <li>Iterasjon og raffinering</li>
-            <li>Presentasjon for oppdragsgiver</li>
           </ul>
-          <p class="process-result">[Placeholder: Hva ble det endelige resultatet, og hvilke tilbakemeldinger fikk vi fra brukertesting?]</p>
+          <p class="process-result">For oss var det viktig å inkludere brukeren gjennom hele prosessen, 
+            fra innsiktsfase til fordig produkt. Derfor har vi brukertestet hver eneste versjon av løsningen, 
+            både wireframes, low fidelity prototype og high fidelity prototypen opptil flere ganger. 
+            Tilbakemeldingene fra testene ga gode innspill til forbedringer og vi opplevde at flere var 
+            positive til en slik løsning. Flere runder med iterasjoner førte oss til det endelige produktet, 
+            en nettside for Gjøvikstranda hvor man finner det man trenger av informasjon på en brukervennlig 
+            og enkel måte. 
+          </p>
         </div>
         <div class="process-item__visual" aria-hidden="true">
           <span class="process-visual-num">04</span>
@@ -196,6 +278,11 @@
       </div>
 
     </div><!-- /process-section -->
+
+    <h2>Refleksjoner</h2>
+    <p>[Placeholder: Hvilke utfordringer møtte vi underveis i prosjektet, og hva fikk vi ikke gjennomført slik vi hadde planlagt?]</p>
+    <p>[Placeholder: Hva lærte vi av dette prosjektet – faglig, metodisk og som gruppe? Innhold kommer her.]</p>
+
   </div><!-- /project-body -->
 
   <footer class="footer">
