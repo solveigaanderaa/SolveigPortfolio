@@ -244,7 +244,11 @@ img { display: block; max-width: 100%; }
 
 .project-card--large { margin-bottom: 1.5rem; }
 
-.projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.projects-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+
+@media (max-width: 720px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}
 
 /* === CONTACT === */
 .contact__heading {
