@@ -180,4 +180,19 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
       slide.querySelector('img')?.addEventListener('click', () => openLb(carImages, idx));
     });
   });
+
+  // Praksis image groups (.img-pair-wrap, .img-row-wrap, .img-solo)
+  ['.img-pair-wrap', '.img-row-wrap'].forEach(sel => {
+    document.querySelectorAll(sel).forEach(wrap => {
+      const imgs = [...wrap.querySelectorAll('img')];
+      const groupImages = imgs.map(img => ({ src: img.src, alt: img.alt }));
+      imgs.forEach((img, idx) => {
+        img.addEventListener('click', () => openLb(groupImages, idx));
+      });
+    });
+  });
+
+  document.querySelectorAll('.img-solo img').forEach(img => {
+    img.addEventListener('click', () => openLb([{ src: img.src, alt: img.alt }], 0));
+  });
 }());
