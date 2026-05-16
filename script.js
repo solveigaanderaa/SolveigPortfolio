@@ -195,4 +195,56 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   document.querySelectorAll('.img-solo img').forEach(img => {
     img.addEventListener('click', () => openLb([{ src: img.src, alt: img.alt }], 0));
   });
+
+  // === INTEREST CARDS LIGHTBOX ===
+  // Prebuilt image lists (paths taken from workspace images folders)
+  const INTEREST_IMAGES = {
+    friluftsliv: [
+      { src: encodeURI('images/sport og friluftsliv/DSC08892.JPG'), alt: 'Friluftsliv' },
+      { src: encodeURI('images/sport og friluftsliv/IMG_1839.jpeg'), alt: 'Friluftsliv' },
+      { src: encodeURI('images/sport og friluftsliv/IMG_1938.jpeg'), alt: 'Friluftsliv' },
+      { src: encodeURI('images/sport og friluftsliv/IMG_5018.JPG'), alt: 'Friluftsliv' },
+      { src: encodeURI('images/sport og friluftsliv/IMG_6234.JPG'), alt: 'Friluftsliv' },
+      { src: encodeURI('images/sport og friluftsliv/IMG_6908.JPG'), alt: 'Friluftsliv' },
+      { src: encodeURI('images/sport og friluftsliv/IMG_7036.JPG'), alt: 'Friluftsliv' },
+      { src: encodeURI('images/sport og friluftsliv/IMG_7039.JPG'), alt: 'Friluftsliv' },
+      { src: encodeURI('images/sport og friluftsliv/IMG_9937.jpeg'), alt: 'Friluftsliv' }
+    ],
+    matlaging: [
+      { src: encodeURI('images/matlaging/IMG_1541.JPG'), alt: 'Matlaging' },
+      { src: encodeURI('images/matlaging/IMG_1542.JPG'), alt: 'Matlaging' },
+      { src: encodeURI('images/matlaging/IMG_1543.JPG'), alt: 'Matlaging' },
+      { src: encodeURI('images/matlaging/IMG_1544.JPG'), alt: 'Matlaging' },
+      { src: encodeURI('images/matlaging/IMG_1545.JPG'), alt: 'Matlaging' }
+    ],
+    kreativt: [
+      { src: encodeURI('images/kreativt håndarbeid/IMG_1547.jpeg'), alt: 'Kreativt håndarbeid' },
+      { src: encodeURI('images/kreativt håndarbeid/IMG_6259.jpeg'), alt: 'Kreativt håndarbeid' },
+      { src: encodeURI('images/kreativt håndarbeid/IMG_8347.JPG'), alt: 'Kreativt håndarbeid' },
+      { src: encodeURI('images/kreativt håndarbeid/IMG_8839.JPG'), alt: 'Kreativt håndarbeid' },
+      { src: encodeURI('images/kreativt håndarbeid/IMG_9188.JPG'), alt: 'Kreativt håndarbeid' }
+    ],
+    fotografering: [
+      { src: encodeURI('images/fotografering/BBCC2437-DD2A-4A72-AA07-82F7C7B37C90.JPG'), alt: 'Fotografering' },
+      { src: encodeURI('images/fotografering/DSC08211.JPG'), alt: 'Fotografering' },
+      { src: encodeURI('images/fotografering/DSC08546.JPG'), alt: 'Fotografering' },
+      { src: encodeURI('images/fotografering/DSC08808.JPG'), alt: 'Fotografering' },
+      { src: encodeURI('images/fotografering/IMG_0321.jpeg'), alt: 'Fotografering' },
+      { src: encodeURI('images/fotografering/IMG_2072.jpeg'), alt: 'Fotografering' },
+      { src: encodeURI('images/fotografering/IMG_2096.JPG'), alt: 'Fotografering' },
+      { src: encodeURI('images/fotografering/IMG_2618.jpeg'), alt: 'Fotografering' },
+      { src: encodeURI('images/fotografering/IMG_2623.jpeg'), alt: 'Fotografering' },
+      { src: encodeURI('images/fotografering/IMG_5493.jpeg'), alt: 'Fotografering' },
+      { src: encodeURI('images/fotografering/IMG_6814.jpeg'), alt: 'Fotografering' },
+      { src: encodeURI('images/fotografering/IMG_9359.jpeg'), alt: 'Fotografering' }
+    ]
+  };
+
+  // Attach click/keyboard handlers to interest cards
+  document.querySelectorAll('.interest-card[data-interest]').forEach(card => {
+    const key = card.dataset.interest;
+    const images = INTEREST_IMAGES[key] || [];
+    card.addEventListener('click', () => { if (images.length) openLb(images, 0); });
+    card.addEventListener('keydown', e => { if (e.key === 'Enter' && images.length) openLb(images, 0); });
+  });
 }());

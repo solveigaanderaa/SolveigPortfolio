@@ -250,6 +250,38 @@ img { display: block; max-width: 100%; }
   .projects-grid { grid-template-columns: 1fr; }
 }
 
+/* === HERO HIGHLIGHT === */
+.hero-highlight { color: #000; font-weight: 700; }
+
+/* === NAV SUB (dropdown) === */
+.nav-sub { background: #ffffff; }
+.nav-sub .nav-sub__inner {
+  background: #ffffff; color: #463f3a; border-radius: 12px; padding: 0.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+.nav-sub .nav-sub__inner a { color: #463f3a; display: block; padding: 0.6rem 1rem; text-decoration: none; }
+.nav-sub .nav-sub__inner a:hover { background: #f6f5f4; }
+
+/* === FIGMA IFRAME SIZING === */
+iframe[src*="figma.com"] {
+  width: 100%;
+  min-height: 700px;
+  border: none;
+}
+@media (min-width: 1024px) {
+  iframe[src*="figma.com"] { min-height: 800px; }
+}
+@media (max-width: 720px) {
+  iframe[src*="figma.com"] { min-height: 700px; }
+}
+
+/* === PROJECT PAGES: LIST SIZE === */
+.project-body ul, .project-body li, .project-body ul li { font-size: 1rem; line-height: 1.8; }
+
+/* === INTEREST CARDS (clickable) === */
+.interest-card { cursor: pointer; transition: transform 0.18s ease; }
+.interest-card:focus { outline: 3px solid rgba(70,63,58,0.12); outline-offset: 3px; }
+.interest-card:hover { transform: translateY(-6px); }
+
 /* === CONTACT === */
 .contact__heading {
   font-family: 'Playfair Display', serif;
