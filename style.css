@@ -317,6 +317,13 @@ iframe[src*="figma.com"] {
 .interest-card:hover { transform: translateY(-6px); }
 
 /* === CONTACT === */
+.contact__wrapper {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3.5rem; align-items: start;
+}
+
+.contact__content { display: flex; flex-direction: column; }
+
 .contact__heading {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 5vw, 3.25rem);
@@ -343,6 +350,8 @@ iframe[src*="figma.com"] {
 }
 
 .contact__item a:hover .contact__icon { border-color: var(--accent-dark); background: #f8f7f6; }
+
+.contact__image { width: 100%; border-radius: 20px; object-fit: cover; display: block; }
 
 /* === FOOTER === */
 .footer {
@@ -756,6 +765,8 @@ iframe[src*="figma.com"] {
   .projects-grid { grid-template-columns: 1fr; }
   .project-card--large .project-card__img { height: 280px; }
   .projects-grid .project-card__img { height: 240px; }
+
+  .contact__wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
 
   .footer { flex-direction: column; gap: 1.25rem; text-align: center; padding: 2rem 1.5rem; }
 
