@@ -206,7 +206,6 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
       { src: encodeURI('images/sport og friluftsliv/IMG_5018.JPG'), alt: 'Friluftsliv' },
       { src: encodeURI('images/sport og friluftsliv/IMG_6234.JPG'), alt: 'Friluftsliv' },
       { src: encodeURI('images/sport og friluftsliv/IMG_6908.JPG'), alt: 'Friluftsliv' },
-      { src: encodeURI('images/sport og friluftsliv/IMG_7036.JPG'), alt: 'Friluftsliv' },
       { src: encodeURI('images/sport og friluftsliv/IMG_7039.JPG'), alt: 'Friluftsliv' },
       { src: encodeURI('images/sport og friluftsliv/IMG_9937.jpeg'), alt: 'Friluftsliv' }
     ],

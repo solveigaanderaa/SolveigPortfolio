@@ -581,7 +581,6 @@ iframe[src*="figma.com"] {
 }
 
 .process-methods { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem; }
-
 .process-methods li {
   font-size: 0.9rem; color: #444;
   display: flex; align-items: flex-start; gap: 0.6rem;
