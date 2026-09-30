@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solveig Aanderaa – Interaksjonsdesigner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,800;1,500&family=Pinyon+Script&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<!--
+  DESIGNREFERANSE – FORSIDEN
+  Denne filen er fasiten. Nettsiden skal se nøyaktig slik ut.
+  Bildestier forutsetter at filen ligger i en undermappe (design-referanse/) i prosjektet.
+-->
+<style>
+:root{
+  --cream:#EEE2D8;
+  --cherry:#9D0000;
+  --cherry-dark:#7A0000;
+  --wafer:#C4A998;
+  --coffee:#290F0B;
+  --muted:#7A5A4C;
+  --serif:'Playfair Display', Georgia, serif;
+  --script:'Pinyon Script', cursive;
+  --sans:'Inter', system-ui, sans-serif;
+  --wrap:1200px;
+  --gutter:clamp(20px, 5vw, 64px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--coffee);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cherry);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+
+/* ---------- Felles byggeklosser ---------- */
+.script{font-family:var(--script);font-weight:400;color:var(--cherry);display:inline-block;transform:rotate(-5deg);line-height:1}
+.sec-head{margin-bottom:44px}
+.sec-head .script{font-size:clamp(40px,4.5vw,56px);margin-left:6px}
+.sec-title{font-family:var(--serif);font-weight:800;font-size:clamp(48px,6vw,72px);line-height:1;letter-spacing:-.01em;margin-top:-.28em}
+.sec-rule{height:1px;background:var(--wafer);margin-top:14px}
+.label{font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.hl{color:var(--cherry);font-weight:500}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--cherry);color:var(--cream);font-size:16px;font-weight:500;padding:16px 34px;border-radius:999px;transition:background .2s}
+.btn:hover{background:var(--cherry-dark)}
+.btn svg{width:18px;height:18px}
+.icon-circle{width:48px;height:48px;border:1px solid var(--wafer);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .2s,color .2s}
+.icon-circle:hover{border-color:var(--cherry);color:var(--cherry)}
+.icon-circle svg{width:20px;height:20px}
+.section{padding:clamp(80px,9vw,130px) 0}
+
+/* ---------- Navbar ---------- */
+.nav{position:sticky;top:0;z-index:50;background:var(--cream)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:88px}
+.nav-logo{font-family:var(--serif);font-style:italic;font-weight:500;font-size:34px;line-height:1}
+.nav-links{display:flex;gap:40px;list-style:none;font-size:16px}
+.nav-links a:hover{color:var(--cherry)}
+.nav-links .has-drop{position:relative}
+.nav-links .has-drop > a{display:inline-flex;align-items:center;gap:6px}
+.nav-links .has-drop svg{width:14px;height:14px}
+.drop{position:absolute;top:100%;left:-18px;padding:14px 0;min-width:240px;background:var(--cream);border:1px solid var(--wafer);border-radius:12px;list-style:none;opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s}
+.has-drop:hover .drop,.has-drop:focus-within .drop{opacity:1;visibility:visible;transform:none}
+.drop a{display:block;padding:8px 18px;font-size:15px}
+.nav-cta{background:var(--cherry);color:var(--cream);padding:10px 24px;border-radius:999px;font-size:15px;font-weight:500;transition:background .2s}
+.nav-cta:hover{background:var(--cherry-dark)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;max-width:1400px;margin:0 auto;padding:24px var(--gutter) 0;overflow:hidden}
+.hero-script{position:absolute;top:6px;left:calc(var(--gutter) + 1vw);font-size:clamp(40px,5vw,72px);transform:rotate(-6deg);z-index:3}
+.hero-name{position:relative;z-index:1;font-family:var(--serif);font-weight:800;font-size:clamp(28px,8.4vw,132px);line-height:1;letter-spacing:-.02em;color:var(--cherry);text-align:center;white-space:nowrap;margin-top:clamp(40px,4.5vw,70px)}
+.hero-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;max-width:var(--wrap);margin:0 auto}
+.hero-text{padding:clamp(28px,3vw,48px) 0 64px;max-width:480px}
+.hero-sub{font-family:var(--serif);font-weight:500;font-size:clamp(32px,3.4vw,46px);line-height:1.1}
+.short-rule{width:72px;height:1px;background:var(--wafer);margin:18px 0 22px}
+.hero-text p{font-size:17px;line-height:1.8;margin-bottom:28px}
+.socials{display:flex;gap:14px;margin-bottom:34px}
+.hero-foot{margin-top:56px;color:var(--coffee)}
+
+.hero-visual{position:relative;z-index:2;height:clamp(460px,48vw,660px);margin-top:calc(-1 * clamp(40px,5vw,80px))}
+.hero-arch{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:72%;height:82%;background:var(--wafer);border-radius:999px 999px 0 0}
+.hero-photo{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:100%;width:auto;max-width:none;object-fit:contain;object-position:bottom}
+.badge{position:absolute;left:0;bottom:12%;width:clamp(110px,11vw,160px);aspect-ratio:1;border-radius:50%;background:var(--cream);z-index:3}
+.badge svg{width:100%;height:100%;animation:spin 18s linear infinite}
+.badge span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(26px,2.6vw,36px)}
+.hero-label{position:absolute;right:-2%;top:30%;width:130px;z-index:3;font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:1.5}
+.hero-arrow{position:absolute;right:12%;top:calc(30% + 70px);width:76px;z-index:3;color:var(--coffee)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- Tekstbånd ---------- */
+.marquee{background:var(--cherry);color:var(--cream);overflow:hidden;padding:18px 0;white-space:nowrap}
+.marquee-track{display:inline-flex;animation:marquee 32s linear infinite}
+.marquee-track span{font-family:var(--serif);font-weight:500;font-size:clamp(22px,2.4vw,32px);letter-spacing:.04em;padding-right:.35em}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ---------- Om meg ---------- */
+.about-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center;margin-bottom:90px}
+.about-grid p{font-size:18px;line-height:1.85;margin-bottom:32px;max-width:560px}
+.polaroid-wrap{position:relative;height:clamp(360px,32vw,420px)}
+.polaroid{position:absolute;right:10%;top:0;width:clamp(220px,22vw,280px);background:#fff;padding:14px 14px 54px;transform:rotate(4deg);border:1px solid #DCCBBD}
+.polaroid img{width:100%;aspect-ratio:1;object-fit:cover}
+.polaroid-caption{position:absolute;right:16%;bottom:0;font-size:clamp(30px,3vw,40px)}
+.cv-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:110px}
+.cv-col{padding:0 32px}
+.cv-col:first-child{padding-left:0}
+.cv-col + .cv-col{border-left:1px solid var(--wafer)}
+.cv-col h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:26px;margin-bottom:24px}
+.cv-item{margin-bottom:22px}
+.cv-item strong{display:block;font-weight:500;font-size:16px;line-height:1.5}
+.cv-item .label{color:var(--muted);font-size:11.5px}
+.interests-head .script{font-size:clamp(36px,4vw,48px);margin-left:4px}
+.interests-title{font-family:var(--serif);font-weight:800;font-size:clamp(36px,4vw,48px);line-height:1;margin:-.3em 0 30px}
+.interests{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.interest{background:var(--wafer);border-radius:16px;padding:28px 24px 32px}
+.interest .num{font-family:var(--serif);font-style:italic;font-weight:500;font-size:30px;color:var(--cherry);line-height:1}
+.interest h4{font-family:var(--serif);font-weight:500;font-size:19px;letter-spacing:.02em;text-transform:uppercase;margin:14px 0 8px;line-height:1.3}
+.interest p{font-size:15px;line-height:1.6}
+
+/* ---------- Prosjekter ---------- */
+.projects{background:var(--coffee);color:var(--cream)}
+.projects .script{color:var(--wafer)}
+.projects .sec-rule{background:rgba(196,169,152,.4)}
+.projects-head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.projects-head-row .label{color:var(--wafer);padding-bottom:14px;white-space:nowrap}
+.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.project-card{display:flex;gap:24px;align-items:center;border:1px solid rgba(196,169,152,.45);border-radius:16px;padding:18px;transition:border-color .25s}
+.project-card:hover{border-color:var(--wafer)}
+.project-card img{width:clamp(140px,15vw,210px);aspect-ratio:4/3;object-fit:cover;border-radius:10px;flex-shrink:0;background:var(--wafer)}
+.project-card .num{font-family:var(--serif);font-style:italic;font-weight:500;font-size:30px;color:var(--wafer);line-height:1}
+.project-card h3{font-family:var(--sans);font-weight:500;font-size:19px;line-height:1.35;margin:8px 0 6px;color:var(--cream)}
+.project-card .label{color:var(--wafer);font-size:11.5px}
+
+/* ---------- Kontakt ---------- */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:center}
+.contact-grid .sec-head{margin-bottom:10px}
+.contact-grid p{font-size:18px;margin:0 0 32px}
+.contact-list{list-style:none;display:grid;gap:16px;font-size:17px}
+.contact-list a{display:inline-flex;align-items:center;gap:16px}
+.contact-list a:hover{color:var(--cherry)}
+.contact-visual{position:relative;height:clamp(420px,40vw,540px);width:clamp(300px,30vw,400px);margin-left:auto}
+.contact-arch-bg{position:absolute;inset:0;background:var(--wafer);border-radius:999px 999px 0 0}
+.contact-photo{position:absolute;left:28px;right:28px;top:28px;bottom:0;width:calc(100% - 56px);height:calc(100% - 28px);object-fit:cover;border-radius:999px 999px 0 0}
+
+/* ---------- Footer ---------- */
+.footer{background:var(--coffee);color:var(--wafer)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;height:84px}
+.footer .nav-logo{color:var(--cream);font-size:28px}
+.footer a:hover{color:var(--cream)}
+
+/* ---------- Mobil ---------- */
+@media (max-width:860px){
+  .nav-links{display:none} /* behold nettsidens eksisterende mobilmeny */
+  .hero-script{font-size:44px;top:10px}
+  .hero-name{white-space:normal;font-size:16vw;line-height:.95;margin-top:56px}
+  .hero-body{grid-template-columns:1fr;gap:0}
+  .hero-visual{order:-1;height:min(110vw,520px);margin-top:-7vw}
+  .hero-arrow{display:none}
+  .hero-label{right:0;top:18%;width:96px;font-size:11px}
+  .hero-text{max-width:none;padding-bottom:48px}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .polaroid-wrap{height:360px}
+  .polaroid{right:auto;left:50%;transform:translateX(-50%) rotate(4deg)}
+  .polaroid-caption{right:auto;left:50%;transform:translateX(10%) rotate(-5deg)}
+  .cv-cols{grid-template-columns:1fr;gap:36px}
+  .cv-col,.cv-col:first-child{padding:0}
+  .cv-col + .cv-col{border-left:none;border-top:1px solid var(--wafer);padding-top:32px}
+  .interests{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-grid{grid-template-columns:1fr}
+  .project-card{flex-direction:column;align-items:flex-start}
+  .project-card img{width:100%}
+  .contact-visual{margin:0 auto;width:min(100%,340px);height:440px}
+  .footer-inner{flex-direction:column;justify-content:center;height:auto;padding:24px 0;text-align:center}
+}
+@media (max-width:480px){
+  .interests{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .badge svg,.marquee-track{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#hjem" class="nav-logo" aria-label="Solveig Aanderaa – til toppen">SA</a>
+    <ul class="nav-links">
+      <li><a href="#hjem">Hjem</a></li>
+      <li><a href="#om">Om meg</a></li>
+      <li class="has-drop">
+        <a href="#prosjekter">Prosjekter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <ul class="drop">
+          <li><a href="gjovikstranda.html">En digital Gjøvikstranda</a></li>
+          <li><a href="helseinn.html">Læringsapp – HelseINN</a></li>
+          <li><a href="ntnusammen.html">NTNUconnect</a></li>
+          <li><a href="praksis.html">Prosjekter fra praksis</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a href="#kontakt" class="nav-cta">Kontakt</a>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="hjem">
+  <span class="script hero-script" aria-hidden="true">Hei, jeg er</span>
+  <h1 class="hero-name">SOLVEIG AANDERAA</h1>
+
+  <div class="hero-body">
+    <div class="hero-text">
+      <h2 class="hero-sub">Interaksjonsdesigner</h2>
+      <div class="short-rule" aria-hidden="true"></div>
+      <p>Masterstudent ved <span class="hl">NTNU Gjøvik</span> med bakgrunn i interaksjonsdesign. Jeg brenner for <span class="hl">løsninger som betyr noe</span> – for mennesker, samfunn og miljø – med fokus på brukerinvolvering og <span class="hl">universell utforming</span>.</p>
+      <div class="socials">
+        <a class="icon-circle" href="mailto:solveig.aanderaa@gmail.com" aria-label="E-post"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+        <a class="icon-circle" href="https://linkedin.com/in/solveig-aanderaa" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
+        <a class="icon-circle" href="https://www.instagram.com/solveig_aanderaa/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5v.01"/></svg></a>
+      </div>
+      <a href="#prosjekter" class="btn">Se mine prosjekter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="label hero-foot">✦ Portefølje 2026</div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-arch" aria-hidden="true"></div>
+      <img class="hero-photo" src="../images/solveig-aanderaa.png" alt="Solveig Aanderaa">
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 160 160">
+          <defs><path id="badge-circle" d="M80 80 m-62 0 a62 62 0 1 1 124 0 a62 62 0 1 1 -124 0"/></defs>
+          <text font-family="Inter, sans-serif" font-size="11.5" fill="#9D0000"><textPath href="#badge-circle" textLength="385" lengthAdjust="spacing">INTERAKSJONSDESIGN ✦ TJENESTEDESIGN ✦ UX ✦</textPath></text>
+        </svg>
+        <span>SA</span>
+      </div>
+      <div class="hero-label">Master<br>@ NTNU<br>Gjøvik</div>
+      <svg class="hero-arrow" viewBox="0 0 76 60" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M66 4 C62 38 36 48 10 46"/><path d="M10 46 L20 38 M10 46 L19 54"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OM MEG ================= -->
+<section class="section" id="om">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="script" aria-hidden="true">Litt om</span>
+      <h2 class="sec-title">MEG</h2>
+      <div class="sec-rule" aria-hidden="true"></div>
+    </div>
+
+    <div class="about-grid">
+      <div>
+        <p>Jeg er en blid og positiv jente fra Sandnes, nå bosatt i Gjøvik. Mine styrker er at jeg er ryddig og organisert, og liker å uttrykke meg kreativt. Jeg setter pris på <span class="hl">minimalisme</span> og design med rolige farger.</p>
+        <a href="../CV.pdf" class="btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg> Last ned CV</a>
+      </div>
+      <div class="polaroid-wrap">
+        <figure class="polaroid">
+          <!-- BYTT: bruk et eksisterende bilde av Solveig fra images-mappen (spør henne hvilket) -->
+          <img src="../images/kontakt.jpeg" alt="Solveig Aanderaa">
+        </figure>
+        <span class="script polaroid-caption" aria-hidden="true">fra Sandnes ✦</span>
+      </div>
+    </div>
+
+    <div class="cv-cols">
+      <div class="cv-col">
+        <h3>✦ Erfaring</h3>
+        <div class="cv-item"><strong>Butikkmedarbeider – REMA 1000</strong><span class="label">Juli 2026 – nå</span></div>
+        <div class="cv-item"><strong>BPA – Brukerstyrt personlig assistent</strong><span class="label">Okt 2025 – aug 2026</span></div>
+        <div class="cv-item"><strong>Praksis hos CoreTrek – interaksjonsdesigner</strong><span class="label">Aug – okt 2025</span></div>
+      </div>
+      <div class="cv-col">
+        <h3>✦ Utdanning</h3>
+        <div class="cv-item"><strong>Master i design av tjenester, teknologi og samhandling</strong><span class="label">NTNU Gjøvik · 2026–2028</span></div>
+        <div class="cv-item"><strong>Bachelor i interaksjonsdesign</strong><span class="label">NTNU Gjøvik · 2023–2026</span></div>
+        <div class="cv-item"><strong>Media og kommunikasjon</strong><span class="label">Akademiet VGS Sandnes · 2020–2023</span></div>
+      </div>
+      <div class="cv-col">
+        <h3>✦ Frivillig</h3>
+        <div class="cv-item"><strong>Fest og kultur på Huset Gjøvik</strong><span class="label">Feb 2024 – nå</span></div>
+        <div class="cv-item"><strong>Arrangementsjef i UKA-styret</strong><span class="label">Sep 2025 – mar 2026</span></div>
+        <div class="cv-item"><strong>PR og foto på Huset Gjøvik</strong><span class="label">Mar – nov 2025</span></div>
+      </div>
+    </div>
+
+    <div class="interests-head">
+      <span class="script" aria-hidden="true">Mine</span>
+      <h3 class="interests-title">INTERESSER</h3>
+    </div>
+    <div class="interests">
+      <div class="interest"><div class="num">01</div><h4>Sport og friluftsliv</h4><p>Trening, ski og tur</p></div>
+      <div class="interest"><div class="num">02</div><h4>Matlaging</h4><p>Eksperimentering på kjøkkenet</p></div>
+      <div class="interest"><div class="num">03</div><h4>Kreativt håndarbeid</h4><p>Strikking, tegning, klippe og lime</p></div>
+      <div class="interest"><div class="num">04</div><h4>Fotografering</h4><p>For å fange stemningen eller et fint naturmotiv</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEKSTBÅND ================= -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>BRUKERINVOLVERING ✦ UNIVERSELL UTFORMING ✦ TJENESTEDESIGN ✦ INTERAKSJONSDESIGN ✦</span>
+    <span aria-hidden="true">BRUKERINVOLVERING ✦ UNIVERSELL UTFORMING ✦ TJENESTEDESIGN ✦ INTERAKSJONSDESIGN ✦</span>
+  </div>
+</div>
+
+<!-- ================= PROSJEKTER ================= -->
+<section class="section projects" id="prosjekter">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="script" aria-hidden="true">Utvalgte</span>
+      <div class="projects-head-row">
+        <h2 class="sec-title">PROSJEKTER</h2>
+        <span class="label">04 prosjekter</span>
+      </div>
+      <div class="sec-rule" aria-hidden="true"></div>
+    </div>
+
+    <div class="project-grid">
+      <a class="project-card" href="../gjovikstranda.html">
+        <img src="../images/Gjøvikstranda.png" alt="">
+        <div><div class="num">01</div><h3>En digital Gjøvikstranda</h3><div class="label">UX-design ✦ Brukerinvolvering</div></div>
+      </a>
+      <a class="project-card" href="../helseinn.html">
+        <img src="../images/helseinn.png" alt="">
+        <div><div class="num">02</div><h3>Læringsapp – HelseINN</h3><div class="label">App-design ✦ Tjenestedesign</div></div>
+      </a>
+      <a class="project-card" href="../ntnusammen.html">
+        <!-- BYTT: bruk det eksisterende NTNUconnect-bildet -->
+        <img src="../images/ntnuconnect.png" alt="">
+        <div><div class="num">03</div><h3>NTNUconnect</h3><div class="label">Sosial app ✦ Studenter</div></div>
+      </a>
+      <a class="project-card" href="../praksis.html">
+        <img src="../images/praksis.jpeg" alt="">
+        <div><div class="num">04</div><h3>Prosjekter fra praksis</h3><div class="label">UX-design ✦ Praksis</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KONTAKT ================= -->
+<section class="section" id="kontakt">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="sec-head">
+        <span class="script" aria-hidden="true">Ta gjerne</span>
+        <h2 class="sec-title">KONTAKT</h2>
+      </div>
+      <p>Ikke nøl med å ta kontakt – jeg er åpen for <span class="hl">samarbeid</span>!</p>
+      <ul class="contact-list">
+        <li><a href="mailto:solveig.aanderaa@gmail.com"><span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>solveig.aanderaa@gmail.com</a></li>
+        <li><a href="https://linkedin.com/in/solveig-aanderaa"><span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></span>linkedin.com/in/solveig-aanderaa</a></li>
+        <li><a href="https://www.instagram.com/solveig_aanderaa/"><span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5v.01"/></svg></span>@solveig_aanderaa</a></li>
+      </ul>
+    </div>
+    <div class="contact-visual">
+      <div class="contact-arch-bg" aria-hidden="true"></div>
+      <img class="contact-photo" src="../images/kontakt.jpeg" alt="Solveig Aanderaa">
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span class="nav-logo">SA</span>
+    <span class="label">✦ © 2026 Solveig Aanderaa</span>
+    <a href="#hjem" class="label">Til toppen ↑</a>
+  </div>
+</footer>
+
+</body>
+</html>

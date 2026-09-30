@@ -1,102 +1,79 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <title>Prosjekter fra praksis – Solveig Aanderaa</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    :root {
-      --project-accent: #CC0F3B;
-      --diamond-fill: #CC0F3B;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prosjekter fra praksis – Solveig Aanderaa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,800;1,500&family=Pinyon+Script&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root{ --accent:#CC0F3B; --accent-text:color-mix(in srgb, var(--accent), #000 38%); }
+</style>
 </head>
-<body class="project-page">
-
-  <nav class="navbar navbar--project" id="navbar">
-    <a href="index.html" class="navbar__logo"><img src="images/logo.png" alt="Solveig Aanderaa"></a>
-    <ul class="navbar__nav" role="list">
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Solveig Aanderaa – forsiden">SA</a>
+    <ul class="nav-links">
       <li><a href="index.html">Hjem</a></li>
       <li><a href="index.html#om">Om meg</a></li>
-      <li class="nav-item--sub">
-        <a href="index.html#prosjekter">
-          Prosjekter
-          <span class="nav-chevron" aria-hidden="true">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 3 5 7 8 3"/></svg>
-          </span>
-        </a>
-        <div class="nav-sub">
-          <div class="nav-sub__inner">
-            <a href="gjovikstranda.html">En digital Gjøvikstranda</a>
-            <a href="helseinn.html">Læringsapp – HelseINN</a>
-            <a href="ntnusammen.html">NTNUconnect</a>
-            <a href="praksis.html">Prosjekter fra praksis</a>
-          </div>
-        </div>
+      <li class="has-drop">
+        <a href="index.html#prosjekter">Prosjekter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <ul class="drop">
+          <li><a href="gjovikstranda.html">En digital Gjøvikstranda</a></li>
+          <li><a href="helseinn.html">Læringsapp – HelseINN</a></li>
+          <li><a href="ntnusammen.html">NTNUconnect</a></li>
+          <li><a href="praksis.html">Prosjekter fra praksis</a></li>
+        </ul>
       </li>
-      <li><a href="index.html#kontakt">Kontakt</a></li>
     </ul>
-    <button class="navbar__hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="navbar__dropdown" id="dropdown">
+    <button class="nav-toggle" type="button" aria-label="Åpne meny" aria-expanded="false"><span></span></button>
+    <div class="nav-mobile">
       <a href="index.html">Hjem</a>
       <a href="index.html#om">Om meg</a>
       <a href="index.html#prosjekter">Prosjekter</a>
       <a href="index.html#kontakt">Kontakt</a>
     </div>
-  </nav>
+    <a href="index.html#kontakt" class="nav-cta">Kontakt</a>
+  </div>
+</header>
 
-  <header class="project-hero">
-    <img class="project-hero__img" src="images/praksis.jpeg" alt="Prosjekter fra praksis">
-    <div class="project-hero__overlay"></div>
-    <div class="project-hero__content">
-      <p class="project-hero__label">UX Design · Praksis</p>
-      <h1 class="project-hero__title">Prosjekter fra praksis</h1>
+<main class="wrap">
+  <section class="p-hero">
+    <img src="images/praksis.jpeg" alt="Prosjekter fra praksis">
+    <div class="p-hero-text">
+      <span class="script" aria-hidden="true">Prosjekt 04</span>
+      <h1 class="p-title">Prosjekter fra praksis</h1>
+      <div class="p-tags">UX-design ✦ Praksis</div>
     </div>
-  </header>
+  </section>
 
-  <div class="project-accent-bar"></div>
+  <a href="index.html#prosjekter" class="back">← Tilbake til prosjekter</a>
 
-  <a href="index.html#prosjekter" class="project-back">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-    Tilbake til prosjekter
-  </a>
-
-  <div class="project-meta">
-    <div class="project-meta__item">
-      <p class="project-meta__label">Kunde</p>
-      <p class="project-meta__value">CoreTrek</p>
-    </div>
-    <div class="project-meta__item">
-      <p class="project-meta__label">Rolle</p>
-      <p class="project-meta__value">UX Designer fulltid</p>
-    </div>
-    <div class="project-meta__item">
-      <p class="project-meta__label">Varighet</p>
-      <p class="project-meta__value">3 måneder</p>
-    </div>
+  <div class="meta">
+    <div><span class="label">Kunde</span><p>CoreTrek</p></div>
+    <div><span class="label">Rolle</span><p>UX Designer fulltid</p></div>
+    <div><span class="label">Varighet</span><p>3 måneder</p></div>
+    <div><span class="label">Type</span><p>Praksis</p></div>
   </div>
 
-  <div class="project-body">
+  <section class="p-section intro-grid">
+    <div>
+      <div class="p-head"><span class="script" aria-hidden="true">Om</span><h2>PROSJEKTET</h2></div>
+      <p>En del av studiet var å ta del i et praksisopphold hos CoreTrek, hvor jeg ble involvert i flere prosjekter med design og forbedring av brukeropplevelser på digitale løsninger.</p>
+    </div>
+    <div class="quote">
+      <span class="mark" aria-hidden="true">“</span>
+      <blockquote>Hvordan kan vi forbedre brukeropplevelsen i eksisterende systemer, samtidig som vi holder designet tydelig, oversiktlig og brukervennlig?</blockquote>
+      <span class="label">Problemstilling</span>
+    </div>
+  </section>
 
-    <h2>Om prosjektet</h2>
-    <p>En del av studiet (interaksjonsdesign) var å ta del i et praksisopphold hos valgfri bedrift, 
-      da valgte jeg CoreTrek i Sandnes. Her ble jeg involvert i flere prosjekter hvor jeg jobbet 
-      med å designe og forbedre brukeropplevelsen på ulike digitale plattformer de bruker.
-    </p>
-
-    <h2>Mine arbeidsoppgaver og metoder</h2>
-    <p>Jeg jobbet en del med design og redesign av publiseringsverktøyet deres, men hadde
-      også andre prosjekter jeg fikk delta på. Oppgavene i publiseringsverktøyet gikk ofte ut på å
-      brukerteste de eksisterende løsningene, skrive rapport og å utvikle redesignforslag som
-      jeg senere presenterte til en designer.</p>
-    <ul class="process-methods" style="margin-top: 1rem;">
+  <section class="p-section">
+    <div class="p-head"><span class="script" aria-hidden="true">Min</span><h2>ROLLE</h2></div>
+    <ul class="role-list">
       <li>Brukertesting</li>
       <li>UU-testing</li>
       <li>Produktutvikling</li>
@@ -104,117 +81,77 @@
       <li>Heuristisk evaluering</li>
       <li>Iterativ designprosess</li>
     </ul>
+  </section>
 
-    <h2>Resultater</h2>
-    <p>Til tross for at oppgavene ikke var så store og omfattende, ga det meg likevel verdifull erfaring med
-      hvordan tverrfaglig samarbeid fungerer i praksis, samt hvordan de ulike delene av selskapets løsninger henger sammen.</p>
+  <section class="p-section">
+    <div class="p-head"><span class="script" aria-hidden="true">Mine</span><h2>RESULTATER</h2></div>
+    <p>Til tross for at oppgavene ikke var så store og omfattende, ga det meg verdifull erfaring med hvordan tverrfaglig samarbeid fungerer i praksis, samt hvordan ulike deler av selskapets løsninger henger sammen.</p>
 
-    <!-- brukerrettigheter – before/after pair -->
-    <div class="img-pair-wrap">
-      <div class="img-pair">
-        <div class="img-pair__col">
-          <span class="img-pair__label">Før</span>
-          <img src="images/praksis/brukerrettigheter%20f%C3%B8r.png" alt="Brukerrettigheter – før">
-        </div>
-        <div class="img-pair__col">
-          <span class="img-pair__label">Etter</span>
-          <img src="images/praksis/brukerrettigheter%20etter.png" alt="Brukerrettigheter – etter">
-        </div>
-      </div>
-      <p class="img-pair__caption">Jeg opplevde systemet her som viser hvilke brukerrettigheter man har, som svært uoversiktlig og rotete. 
-        Derfor plasserte jeg heller informasjonen i en tabell for bedre oversikt og bedre lesbarhet. I tilleg tar dette ikke like mye plass som den originale versjonen</p>
-    </div>
-
-    <!-- editor – before/after pair -->
-    <div class="img-pair-wrap">
-      <div class="img-pair">
-        <div class="img-pair__col">
-          <span class="img-pair__label">Før</span>
-          <img src="images/praksis/editor%20f%C3%B8r.png" alt="Editor – før">
-        </div>
-        <div class="img-pair__col">
-          <span class="img-pair__label">Etter</span>
-          <img src="images/praksis/editor%20etter.png" alt="Editor – etter">
+    <div class="phase">
+      <div class="num">01</div>
+      <div>
+        <h3>Brukerrettigheter</h3>
+        <p>Jeg opplevde systemet som viser hvilke brukerrettigheter man har, som svært uoversiktlig og rotete. Derfor flyttet jeg informasjonen inn i en tabell for bedre oversikt og lesbarhet.</p>
+        <div class="p-gallery">
+          <img src="images/praksis/brukerrettigheter før.png" alt="Brukerrettigheter før">
+          <img src="images/praksis/brukerrettigheter etter.png" alt="Brukerrettigheter etter">
         </div>
       </div>
-      <p class="img-pair__caption">Designet av de egenlagde komponentene til bedriften i editoren opplevdes som utdaterte 
-        og lite engasjerende samt med lite oversikt over innholdet.
-        Derfor lagde jeg heller en synlig meny, framfor en dropdown med flere av systemets farger og et mer moderne utseende.</p>
     </div>
 
-    <!-- mobil meny – alle i rekkefølge -->
-    <div class="img-row-wrap">
-      <div class="img-row">
-        <div class="img-row__col">
-          <span class="img-pair__label">Før 1</span>
-          <img src="images/praksis/mobil%20meny%20f%C3%B8r.png" alt="Mobil meny – før">
-        </div>
-        <div class="img-row__col">
-          <span class="img-pair__label">Før 2</span>
-          <img src="images/praksis/mobil%20meny%20f%C3%B8r%202.png" alt="Mobil meny – før 2">
-        </div>
-        <div class="img-row__col">
-          <span class="img-pair__label">Etter 1</span>
-          <img src="images/praksis/mobil%20meny%20etter%201.png" alt="Mobil meny – etter 1">
-        </div>
-        <div class="img-row__col">
-          <span class="img-pair__label">Etter 2</span>
-          <img src="images/praksis/mobil%20meny%20etter%202.png" alt="Mobil meny – etter 2">
+    <div class="phase">
+      <div class="num">02</div>
+      <div>
+        <h3>Editor</h3>
+        <p>Designet av de egenlagde komponentene i editoren opplevdes som utdaterte og lite engasjerende. Jeg utviklet en mer tydelig meny og modernisert visuellelementene.</p>
+        <div class="p-gallery">
+          <img src="images/praksis/editor før.png" alt="Editor før">
+          <img src="images/praksis/editor etter.png" alt="Editor etter">
         </div>
       </div>
-      <p class="img-pair__caption">Den originale menyen var lite brukervennlig og utfordrende å navigere 
-        seg rundt i da man måtte lukke den ene menyen for å kunne bruke den andre. Mitt forsag her var å 
-        ha menyene som faner istedenfor, slik at man enkelt kan nvigere mellom begge menyene
-      </p>
     </div>
 
-    <!-- System 1 og 2 – side om side -->
-    <div class="img-pair-wrap">
-      <div class="img-pair">
-        <div class="img-pair__col">
-          <img src="images/praksis/System%201%20f%C3%B8r.png" alt="System 1">
-        </div>
-        <div class="img-pair__col">
-          <img src="images/praksis/system%202%20etter.png" alt="System 2 – etter">
+    <div class="phase">
+      <div class="num">03</div>
+      <div>
+        <h3>Mobil meny</h3>
+        <p>Den originale menyen var lite brukervennlig og utfordrende å navigere i. Jeg redesignet den til faner for å gjøre navigasjonen enklere og mer oversiktlig.</p>
+        <div class="p-gallery">
+          <img src="images/praksis/mobil meny før.png" alt="Mobil meny før">
+          <img src="images/praksis/mobil meny før 2.png" alt="Mobil meny før 2">
+          <img src="images/praksis/mobil meny etter 1.png" alt="Mobil meny etter 1">
+          <img src="images/praksis/mobil meny etter 2.png" alt="Mobil meny etter 2">
         </div>
       </div>
-      <p class="img-pair__caption">Under oppgaven der jeg ble bedt om å laste opp en fil, ble jeg blant annet forvirret av at jeg 
-        selv måtte starte opplastningen. I tillegg hadde jeg en svært bred skjerm som blant annet gjorde at 
-        knappen falt langt ut hvor jeg ikke så den. Knappen var også svært lite synlig på grunn av dens lite farger.
-        Knappene ble flyttet mer mot midten av skjermen, og fikk endret farge til en mer synlig blå.</p>
     </div>
 
-    <h2>Refleksjon</h2>
-    <p>Gjennom praksisperioden min hos CoreTrek fikk jeg delta på mange spennende og lærerike prosjekter. 
-      Jeg lærte mye om hvordan man arbeider i et profesjonelt miljø og hvordan man kommuniserer effektivt med teamet. 
-      Dessverre var det ingen av designerne i bedriften som satt på samme kontor som meg. Dette gjorde læringsprosessen 
-      litt mer utfordrende, da jeg ikke like lett fikk samarbeidet med designere like mye som jeg kanskje hadde trengt. 
-      I tilleg benyttet de andre verktøy enn det jeg hadde kunnskap i, som gjorde at jeg ikke fikk så mye ny læring i for 
-      eksempel Figma, men heller lærte av egne erfaringer og internettet. Skulle jeg hatt praksis igjen ville jeg undersøkt 
-      på forhånd hvilke verktøy som blir brukt og eventuelt satt meg inn i det før praksisen.
-    </p>
-
-  </div><!-- /project-body -->
-
-  <footer class="footer">
-    <p class="footer__copy">© 2026 Solveig Aanderaa</p>
-    <div class="footer__social">
-      <a href="mailto:solveig.aanderaa@gmail.com" aria-label="E-post">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      </a>
-      <a href="https://linkedin.com/in/solveig-aanderaa" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-      <a href="https://www.instagram.com/solveig_aanderaa/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-      </a>
+    <div class="phase">
+      <div class="num">04</div>
+      <div>
+        <h3>Opplasting av fil</h3>
+        <p>Knappen for opplasting var lite synlig og lå unaturlig ute til siden. Jeg flyttet den mer midt i layouten og gjorde den tydelig med mer kontrast.</p>
+        <div class="p-gallery">
+          <img src="images/praksis/System 1 før.png" alt="System 1 før">
+          <img src="images/praksis/system 2 etter.png" alt="System 2 etter">
+        </div>
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <a href="#" class="back-to-top" id="backToTop" aria-label="Til toppen">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
-  </a>
+  <section class="p-section">
+    <div class="p-head"><span class="script" aria-hidden="true">Mine</span><h2>REFLEKSJON</h2></div>
+    <p>Gjennom praksisperioden min hos CoreTrek fikk jeg delta på mange spennende og lærerike prosjekter. Jeg lærte mye om hvordan man arbeider i et profesjonelt miljø og hvordan man kommuniserer effektivt med teamet. Det var utfordrende at designerne ikke satt på samme kontor som meg, og at de brukte andre verktøy enn det jeg var vant med.</p>
+  </section>
+</main>
 
-  <script src="script.js"></script>
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span class="nav-logo">SA</span>
+    <span class="label">✦ © 2026 Solveig Aanderaa</span>
+    <a href="#hjem" class="label">Til toppen ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

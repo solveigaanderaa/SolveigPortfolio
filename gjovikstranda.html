@@ -1,342 +1,163 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <title>En digital Gjøvikstranda – Solveig Aanderaa</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    :root {
-      --project-accent: #78947C;
-      --diamond-fill: #78947C;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>En digital Gjøvikstranda – Solveig Aanderaa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,800;1,500&family=Pinyon+Script&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root{ --accent:#7E967F; --accent-text:color-mix(in srgb, var(--accent), #000 38%); }
+</style>
 </head>
-<body class="project-page">
-
-  <nav class="navbar navbar--project" id="navbar">
-    <a href="index.html" class="navbar__logo"><img src="images/logo.png" alt="Solveig Aanderaa"></a>
-    <ul class="navbar__nav" role="list">
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Solveig Aanderaa – forsiden">SA</a>
+    <ul class="nav-links">
       <li><a href="index.html">Hjem</a></li>
       <li><a href="index.html#om">Om meg</a></li>
-      <li class="nav-item--sub">
-        <a href="index.html#prosjekter">
-          Prosjekter
-          <span class="nav-chevron" aria-hidden="true">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 3 5 7 8 3"/></svg>
-          </span>
-        </a>
-        <div class="nav-sub">
-          <div class="nav-sub__inner">
-            <a href="gjovikstranda.html">En digital Gjøvikstranda</a>
-            <a href="helseinn.html">Læringsapp – HelseINN</a>
-            <a href="ntnusammen.html">NTNUconnect</a>
-            <a href="praksis.html">Prosjekter fra praksis</a>
-          </div>
-        </div>
+      <li class="has-drop">
+        <a href="index.html#prosjekter">Prosjekter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <ul class="drop">
+          <li><a href="gjovikstranda.html">En digital Gjøvikstranda</a></li>
+          <li><a href="helseinn.html">Læringsapp – HelseINN</a></li>
+          <li><a href="ntnusammen.html">NTNUconnect</a></li>
+          <li><a href="praksis.html">Prosjekter fra praksis</a></li>
+        </ul>
       </li>
-      <li><a href="index.html#kontakt">Kontakt</a></li>
     </ul>
-    <button class="navbar__hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="navbar__dropdown" id="dropdown">
+    <button class="nav-toggle" type="button" aria-label="Åpne meny" aria-expanded="false"><span></span></button>
+    <div class="nav-mobile">
       <a href="index.html">Hjem</a>
       <a href="index.html#om">Om meg</a>
       <a href="index.html#prosjekter">Prosjekter</a>
       <a href="index.html#kontakt">Kontakt</a>
     </div>
-  </nav>
+    <a href="index.html#kontakt" class="nav-cta">Kontakt</a>
+  </div>
+</header>
 
-  <header class="project-hero">
-    <img class="project-hero__img" src="images/Gjøvikstranda.png" alt="Gjøvikstranda prosjekt">
-    <div class="project-hero__overlay"></div>
-    <div class="project-hero__content">
-      <p class="project-hero__label">UX-design</p>
-      <h1 class="project-hero__title">En digital Gjøvikstranda</h1>
+<main class="wrap">
+  <section class="p-hero">
+    <img src="images/Gjøvikstranda.png" alt="Gjøvikstranda">
+    <div class="p-hero-text">
+      <span class="script" aria-hidden="true">Prosjekt 01</span>
+      <h1 class="p-title">En digital Gjøvikstranda</h1>
+      <div class="p-tags">UX-design ✦ Bacheloroppgave</div>
     </div>
-  </header>
+  </section>
 
-  <div class="project-accent-bar"></div>
+  <a href="index.html#prosjekter" class="back">← Tilbake til prosjekter</a>
 
-  <a href="index.html#prosjekter" class="project-back">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-    Tilbake til prosjekter
-  </a>
-
-  <div class="project-meta">
-    <div class="project-meta__item">
-      <p class="project-meta__label">Oppdragsgiver</p>
-      <p class="project-meta__value">Gjøvik kommune</p>
-    </div>
-    <div class="project-meta__item">
-      <p class="project-meta__label">Fag</p>
-      <p class="project-meta__value">Bacheloroppgave</p>
-    </div>
-    <div class="project-meta__item">
-      <p class="project-meta__label">Varighet</p>
-      <p class="project-meta__value">Januar – Mai 2025</p>
-    </div>
-    <div class="project-meta__item">
-      <p class="project-meta__label">Gruppemedlemmer</p>
-      <p class="project-meta__value">4 interaksjonsdesignere</p>
-    </div>
+  <div class="meta">
+    <div><span class="label">Oppdragsgiver</span><p>Gjøvik kommune</p></div>
+    <div><span class="label">Fag</span><p>Bacheloroppgave</p></div>
+    <div><span class="label">Varighet</span><p>Januar – mai 2025</p></div>
+    <div><span class="label">Gruppemedlemmer</span><p>4 interaksjonsdesignere</p></div>
   </div>
 
-  <div class="project-body">
+  <section class="p-section intro-grid">
+    <div>
+      <div class="p-head"><span class="script" aria-hidden="true">Om</span><h2>PROSJEKTET</h2></div>
+      <p>Bacheloroppgave i samarbeid med Gjøvik kommune. Gjøvik kommune er i gang med å utvikle Gjøvikstranda om til et aktivitet- og rekreasjonsområde. Det de derimot frykter er at ikke folk kommer til å ta det i bruk.</p>
+    </div>
+    <div class="quote">
+      <span class="mark" aria-hidden="true">“</span>
+      <blockquote>Hvordan kan vi designe en brukervennlig digital løsning som gjør det enklere å finne relevant informasjon om Gjøvikstranda?</blockquote>
+      <span class="label">Problemstilling</span>
+    </div>
+  </section>
 
-    <h2>Om prosjektet</h2>
-    <p>Bacheloroppgave i samarbeid med Gjøvik kommune. Gjøvik kommune er i gang 
-      med å utvikle Gjøvikstranda om til et aktivitet- og rekreasjonsområde. 
-      Det de derimot frykter er at ikke folk kommer til å ta det i bruk. 
-      Gjennom spørreundersøkelser og grundig research har vi funnet ut at årsaken til at 
-      Gjøvikstranda blir mindre brukt av enkelte aldersgrupper, 
-      skyldes for lite tilgjengelig informasjon og ikke tilstrekkelig med synliggjøring av tilbudene. 
-      Da vi spurte dem hvor de hadde lett etter informasjon om Gjøvikstranda var svaret i all hovedsak 
-      på nett og sosiale medier, et sted Gjøvikstranda ikke befinner seg i dag.</p>
-
-    <h2>Min rolle</h2>
-    <ul class="process-methods">
-      <li>Referent under hele perioden, tok notater fra møter, brukertester og intervjuer</li>
+  <section class="p-section">
+    <div class="p-head"><span class="script" aria-hidden="true">Min</span><h2>ROLLE</h2></div>
+    <ul class="role-list">
+      <li>Referent under hele perioden</li>
       <li>Deltok under intervjuer og spørreundersøkelser</li>
-      <li>Bearbeidet informasjonen fra intervjuene</li>
-      <li>Generell deltakelse under alle metodene</li>
-      <li>Idemyldring</li>
-      <li>Personas</li>
-      <li>Scenario</li>
+      <li>Personas og scenario</li>
       <li>Brukerreise</li>
       <li>Wireframes</li>
       <li>Prototyping</li>
     </ul>
+  </section>
 
-    <h2>Problemstilling</h2>
-    <p>"Hvordan kan vi designe en brukervennlig digital løsning som gjør det enklere å finne relevant informasjon om Gjøvikstranda?"</p>
+  <section class="p-section">
+    <div class="p-head"><span class="script" aria-hidden="true">Vår</span><h2>PROSESS</h2></div>
+    <div class="steps">
+      <div class="step"><div class="dot">01</div><span>Utforske</span></div>
+      <div class="step"><div class="dot">02</div><span>Definere</span></div>
+      <div class="step"><div class="dot">03</div><span>Utvikle</span></div>
+      <div class="step"><div class="dot">04</div><span>Teste</span></div>
+    </div>
 
-    <h2>Løsning</h2>
-    <p>Målet med Gjøvikstranda.no er å gjøre det enkelt for brukere å få oversikt, finne aktiviteter, fasiliteter, 
-      og utforske området på en intuitiv måte gjenom løsningen. 
-      Hovedelementene på forsiden er basert på de mest omtalte temaene angående Gjøvikstranda hos Gjøviks befolkning.</p>
-
-    <!-- FIGMA PROTOTYPE -->
-    <div class="proto-duo">
-      <div class="proto-duo__laptop">
-        <div class="proto-frame">
-          <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/bOX7MyZKhXK6rrNrVO91T0/Bachelor?node-id=64825-37293&t=unWfI1PQ5i6FRI11-1" width="100%" height="520" allowfullscreen></iframe>
+    <div class="phase">
+      <div class="num">01</div>
+      <div>
+        <h3>Utforske</h3>
+        <ul class="methods"><li>Desk research</li><li>SWOT-analyse</li><li>Spørreundersøkelse</li><li>Ekspertintervjuer</li></ul>
+        <p>Etter en spørreundersøkelse gjort på innbyggere i Gjøvik fant vi ut at mange unge voksne ikke visste hva Gjøvikstranda var, og at de fleste hadde lett etter informasjon på nett. Vi identifiserte et tydelig behov for bedre synliggjøring og mer tilgjengelig informasjon.</p>
+        <div class="p-gallery">
+          <img src="images/Gjøvikstranda/fase%201/spørreundersøkelse%20statistikk.png" alt="Statistikk fra spørreundersøkelse">
+          <img src="images/Gjøvikstranda/fase%201/swot.png" alt="SWOT-analyse">
+          <img src="images/Gjøvikstranda/fase%201/swot%20rangeringer.png" alt="Rangering av løsningene fra SWOT-analysen">
         </div>
-        <a href="https://www.figma.com/proto/bOX7MyZKhXK6rrNrVO91T0/Bachelor?node-id=64825-37293&t=unWfI1PQ5i6FRI11-1" target="_blank" rel="noopener" class="btn btn--dark proto-btn">Åpne desktop i Figma</a>
-      </div>
-      <div class="proto-duo__phone">
-        <div class="proto-frame">
-          <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/bOX7MyZKhXK6rrNrVO91T0/Bachelor?node-id=63858-33397&t=unWfI1PQ5i6FRI11-1" width="100%" height="580" allowfullscreen></iframe>
-        </div>
-        <a href="https://www.figma.com/proto/bOX7MyZKhXK6rrNrVO91T0/Bachelor?node-id=63858-33397&t=unWfI1PQ5i6FRI11-1" target="_blank" rel="noopener" class="btn btn--dark proto-btn">Åpne mobil i Figma</a>
       </div>
     </div>
 
-    <!-- PROSESS -->
-    <div class="process-section">
-      <h2>Prosess</h2>
-
-      <div class="dd-wrap">
-        <svg class="dd-svg" viewBox="0 0 740 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <polygon points="30,80 200,10 200,150" fill="var(--diamond-fill)" opacity="0.35"/>
-          <polygon points="200,10 370,80 200,150" fill="var(--diamond-fill)" opacity="0.72"/>
-          <polygon points="370,80 540,10 540,150" fill="var(--diamond-fill)" opacity="0.35"/>
-          <polygon points="540,10 710,80 540,150" fill="var(--diamond-fill)" opacity="0.72"/>
-          <circle cx="30" cy="80" r="5" fill="var(--diamond-fill)"/>
-          <circle cx="200" cy="10" r="5" fill="var(--diamond-fill)"/>
-          <circle cx="200" cy="150" r="5" fill="var(--diamond-fill)"/>
-          <circle cx="370" cy="80" r="5" fill="var(--diamond-fill)"/>
-          <circle cx="540" cy="10" r="5" fill="var(--diamond-fill)"/>
-          <circle cx="540" cy="150" r="5" fill="var(--diamond-fill)"/>
-          <circle cx="710" cy="80" r="5" fill="var(--diamond-fill)"/>
-        </svg>
-        <div class="dd-labels">
-          <span>Uforske</span>
-          <span>Definere</span>
-          <span>Utvikle</span>
-          <span>Teste</span>
+    <div class="phase">
+      <div class="num">02</div>
+      <div>
+        <h3>Definere</h3>
+        <ul class="methods"><li>Affinitetsdiagram</li><li>Personas</li><li>Scenario</li><li>Brukerreise</li></ul>
+        <p>Resultatet fra defineringsfasen var tre personas med ulike behov og utfordringer. Vi utviklet brukerreiser og identifiserte at Gjøvikstranda trenger en egen digital løsning for å gjøre relevant informasjon lettere tilgjengelig.</p>
+        <div class="p-gallery">
+          <img src="images/Gjøvikstranda/fase%202/Skjermbilde%202026-05-14%20kl.%2014.42.20.png" alt="Affinity map">
+          <img src="images/Gjøvikstranda/fase%202/persona%201.png" alt="Persona Elisabeth">
+          <img src="images/Gjøvikstranda/fase%202/brukerreise%203.png" alt="Brukerreise Elisabeth">
         </div>
       </div>
-
-      <!-- Utforske -->
-      <div class="process-item fade-in">
-        <div class="process-item__text">
-          <span class="process-num">01</span>
-          <h3 class="process-title">Utforske</h3>
-          <ul class="process-methods">
-            <li>Desk research</li>
-            <li>SWOT analyse</li>
-            <li>Spørreundersøkelse</li>
-            <li>Ekspertintervjuer</li>
-          </ul>
-          <p class="process-result">Etter en spørreundersøkelse gjort på innbyggere i Gjøvik fant vi ut 
-            at mange unge voksne ikke visste hva Gjøvikstranda var, og at de aller fleste 
-            hadde lett etter informasjon på internett, på kommunens sider eller spurt på rådhuset. 
-            Researchen vi fant viste at internettbruken hadde økt for alle aldersgruppene, inkludert de eldre. Her sto 
-            det også at rekreasjonsprosjekter burde benytte seg av internett som markedsføring, da du får et 
-            enda bredere publikum. De mest sentrale funnene fra spørreundersøkelsen baserte seg på at de som 
-            vet om Gjøvikstranda mener det trengs flere aktiviteter og fasiliteter, mens de som ikke kjenner 
-            til det mener det trengs bedre synliggjøring. I etterkant av ekspertintervjuene satt vi igjen med 
-            et inntrykk av viktigheten rundt brukerinnvolvering fra starten av et prosjekt, og at det må både 
-            fysisk og digital promotering til for optimal synliggjøring.
-          </p>
-        </div>
-        <div class="carousel">
-          <div class="carousel__slides">
-            <div class="carousel__slide active"><img src="images/Gjøvikstranda/fase%201/spørreundersøkelse%20statistikk.png" alt="Statistikk fra spørreundersøkelse" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%201/swot.png" alt="SWOT-analyse" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%201/swot%20rangeringer.png" alt="Rangering av nettsidene fra SWOT analysen" loading="lazy"></div>
-          </div>
-          <button class="carousel__btn carousel__btn--prev" aria-label="Forrige bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
-          <button class="carousel__btn carousel__btn--next" aria-label="Neste bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
-          <p class="carousel__caption">Statistikk fra spørreundersøkelse</p>
-        </div>
-      </div>
-
-      <!-- Definere -->
-      <div class="process-item process-item--reverse fade-in">
-        <div class="process-item__text">
-          <span class="process-num">02</span>
-          <h3 class="process-title">Definere</h3>
-          <ul class="process-methods">
-            <li>Affinitetsdiagram</li>
-            <li>Personas</li>
-            <li>Scenario</li>
-            <li>Brukerreise</li>
-            <li>Iterasjoner av problemstillingen</li>
-          </ul>
-          <p class="process-result">Resultatet fra defineringsfasen var tre personas, 
-            én fra hver aldersgruppe, med egne behov og utfordringer. Disse hadde et eget 
-            scenario hver som gikk ut på å finne ønsket informasjon om Gjøvikstranda ved bruk av løsningen 
-            vår. For å illustrere hvordan det vil se ut å bruke vår løsning i praksis 
-            lagde vi tre brukerreiser tilhørende personasene. Dagens løsning  
-            fikk også en brukerreise fra ett av personasene for å demonstrere hvor tungvindt og 
-            utfordrende det er å finne riktig informasjon. Det er nå tydelig at Gjøvikstranda 
-            trenger sin egen nettside for å enkelt kunne finne informasjonen man trenger.</p>
-        </div>
-        <div class="carousel">
-          <div class="carousel__slides">
-            <div class="carousel__slide active"><img src="images/Gjøvikstranda/fase%202/Skjermbilde%202026-05-14%20kl.%2014.42.20.png" alt="Affinity map" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/Skjermbilde%202026-05-14%20kl.%2014.42.52.png" alt="Sortert innsikt fra affinity map" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/persona%201.png" alt="Persona Elisabeth" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/personas%202.png" alt="Persona Familien Nilsen" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/personas%203.png" alt="Persona Noah" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/brukerreise%203.png" alt="Brukerreise Elisabeth" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/brukerreise%201.png" alt="Brukerreise familien Nilsen" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/brukerreise%202.png" alt="Brukerreise Noah" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%202/brukerrreise%20nå.png" alt="Brukerreise – nåsituasjon" loading="lazy"></div>
-          </div>
-          <button class="carousel__btn carousel__btn--prev" aria-label="Forrige bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
-          <button class="carousel__btn carousel__btn--next" aria-label="Neste bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
-          <p class="carousel__caption">Affinitymap</p>
-        </div>
-      </div>
-
-      <!-- Utvikle -->
-      <div class="process-item fade-in">
-        <div class="process-item__text">
-          <span class="process-num">03</span>
-          <h3 class="process-title">Utvikle</h3>
-          <ul class="process-methods">
-            <li>Moodboard</li>
-            <li>Crazy 4</li>
-            <li>MoSCoW</li>
-            <li>Sitemap</li>
-            <li>Wireframes</li>
-            <li>Low fidelity prototype</li>
-            <li>High fidelity prototype</li>
-          </ul>
-          <p class="process-result">Etter idegenerering utviklet vi et 
-            sitemap for nettsiden vår. Hovednavigeringen tar utgangspunkt i en rapport utviklet 
-            av Gjøvikstranda etter en brukermedvirknings-workshop med innbyggere fra Gjøvik. 
-            Se sitemappet for de mest omtalte temaene som la grunnlag for innholdet. Videre 
-            genererte vi wireframes med vår egen forenklede variant av crazy 8, crazy 4. 
-            Wireframes ble low fidelity prototype, til en fungerende high 
-            fidelity prototype, både for desktop og mobil. Vi mottok en designmanual 
-            fra designbyrået Frostrøyk som la grunnlaget for desigelementene i løsningen.
-          </p>
-        </div>
-        <div class="carousel">
-          <div class="carousel__slides">
-            <div class="carousel__slide active"><img src="images/Gjøvikstranda/fase%203/sitemap.png" alt="Sitemap" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/moscow.png" alt="MoSCoW-analyse" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/Homepage-1.png" alt="Wireframes forside" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/Homepage.png" alt="Wireframes underside" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/underside.png" alt="Wireframes underside" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/moodboard.png" alt="Moodboard" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/Skjermbilde%202026-05-14%20kl.%2015.09.04.png" alt="Low fidelity prototype" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/Skjermbilde%202026-05-14%20kl.%2015.09.39.png" alt="Low fidelity prototype" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/High%20fidelity%20-%20Desktop.png" alt="High fidelity – desktop" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/Gjøvikstranda/fase%203/High%20fidelity%20-%20Phone.png" alt="High fidelity – mobil" loading="lazy"></div>
-          </div>
-          <button class="carousel__btn carousel__btn--prev" aria-label="Forrige bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
-          <button class="carousel__btn carousel__btn--next" aria-label="Neste bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
-          <p class="carousel__caption">Sitemap</p>
-        </div>
-      </div>
-
-      <!-- Teste -->
-      <div class="process-item process-item--reverse fade-in">
-        <div class="process-item__text">
-          <span class="process-num">04</span>
-          <h3 class="process-title">Teste</h3>
-          <ul class="process-methods">
-            <li>Brukertesting</li>
-          </ul>
-          <p class="process-result">For oss var det viktig å inkludere brukeren gjennom hele prosessen, 
-            fra innsiktsfase til ferdig produkt. Derfor har vi brukertestet hver eneste versjon av løsningen, 
-            både wireframes, low fidelity prototype og high fidelity prototypen opptil flere ganger. 
-            Tilbakemeldingene fra testene ga gode innspill til forbedringer og vi opplevde at flere var 
-            positive til en slik løsning. Flere runder med iterasjoner førte oss til det endelige produktet, 
-            en nettside for Gjøvikstranda hvor man finner det man trenger av informasjon på en brukervennlig 
-            og enkel måte. 
-          </p>
-        </div>
-        <div class="process-item__visual" aria-hidden="true">
-          <span class="process-visual-num">04</span>
-        </div>
-      </div>
-
-    </div><!-- /process-section -->
-
-    <h2>Refleksjoner</h2>
-    <p>Generelt sett er gruppen meget fornøyd med løsningen av oppgaven, men det er ett par ting vi gjerne 
-      skulle gjort annerledes. Blant annet hadde vi kun fire eldre deltakere til spørreundersøkelse, i 
-      forskjell til omtrent 20 stykker på de andre aldersgruppene. Innsikten gir dermed ikke et godt nok grunnlag og  
-      beskriver ikke reelle behov hos lokale brukere. For å oppnå et mer pålitelig og representativt 
-      grunnlag ville det vært hensiktsmessig å inkludere flere fra den eldre brukergruppen. Videre ble 
-      brukertestingen av desktop versjonen nedprioritert, både på grunn av tidsmessige begrensninger men og 
-      basert på statistikk som viser at mobil er den mest brukt enheten. Denne prioriteringen kan ha gått på 
-      bekostning av opplevelsen av nettsiden på desktop, og kan ha medført at vi ikke har fått identifisert 
-      enkelte svakheter på enheten.
-    </p>
-
-  </div><!-- /project-body -->
-
-  <footer class="footer">
-    <p class="footer__copy">© 2026 Solveig Aanderaa</p>
-    <div class="footer__social">
-      <a href="mailto:solveig.aanderaa@gmail.com" aria-label="E-post">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      </a>
-      <a href="https://linkedin.com/in/solveig-aanderaa" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-      <a href="https://www.instagram.com/solveig_aanderaa/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-      </a>
     </div>
-  </footer>
 
-  <a href="#" class="back-to-top" id="backToTop" aria-label="Til toppen">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
-  </a>
+    <div class="phase">
+      <div class="num">03</div>
+      <div>
+        <h3>Utvikle</h3>
+        <ul class="methods"><li>Moodboard</li><li>Crazy 4</li><li>MoSCoW</li><li>Sitemap</li><li>Wireframes</li></ul>
+        <p>Etter idegenerering utviklet vi en sitemap og wireframes for løsningens hovednavigasjon og innhold. Deretter laget vi en low fidelity prototype og en fungerende high fidelity prototype både for desktop og mobil.</p>
+        <div class="p-gallery">
+          <img src="images/Gjøvikstranda/fase%203/sitemap.png" alt="Sitemap">
+          <img src="images/Gjøvikstranda/fase%203/moscow.png" alt="MoSCoW-analyse">
+          <img src="images/Gjøvikstranda/fase%203/High%20fidelity%20-%20Desktop.png" alt="High fidelity desktop">
+        </div>
+      </div>
+    </div>
 
-  <script src="script.js"></script>
+    <div class="phase">
+      <div class="num">04</div>
+      <div>
+        <h3>Teste</h3>
+        <ul class="methods"><li>Brukertesting</li></ul>
+        <p>For oss var det viktig å inkludere brukeren gjennom hele prosessen. Vi brukertestet hver versjon av løsningen og fikk gode innspill til forbedringer. Flere iterasjoner førte oss til det endelige produktet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-section">
+    <div class="p-head"><span class="script" aria-hidden="true">Mine</span><h2>REFLEKSJONER</h2></div>
+    <p>Generelt sett er gruppen meget fornøyd med løsningen av oppgaven, men det er ett par ting vi gjerne skulle gjort annerledes. Blant annet hadde vi kun fire eldre deltakere til spørreundersøkelse. Videre ble brukertesting av desktop-versjonen nedprioritert på grunn av tidsmessige begrensninger.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span class="nav-logo">SA</span>
+    <span class="label">✦ © 2026 Solveig Aanderaa</span>
+    <a href="#hjem" class="label">Til toppen ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

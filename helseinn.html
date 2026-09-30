@@ -1,334 +1,156 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <title>Læringsapp – HelseINN – Solveig Aanderaa</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    :root {
-      --project-accent: #C96523;
-      --diamond-fill: #C96523;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Læringsapp – HelseINN – Solveig Aanderaa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,800;1,500&family=Pinyon+Script&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root{ --accent:#C96523; --accent-text:color-mix(in srgb, var(--accent), #000 38%); }
+</style>
 </head>
-<body class="project-page">
-
-  <nav class="navbar navbar--project" id="navbar">
-    <a href="index.html" class="navbar__logo"><img src="images/logo.png" alt="Solveig Aanderaa"></a>
-    <ul class="navbar__nav" role="list">
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Solveig Aanderaa – forsiden">SA</a>
+    <ul class="nav-links">
       <li><a href="index.html">Hjem</a></li>
       <li><a href="index.html#om">Om meg</a></li>
-      <li class="nav-item--sub">
-        <a href="index.html#prosjekter">
-          Prosjekter
-          <span class="nav-chevron" aria-hidden="true">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 3 5 7 8 3"/></svg>
-          </span>
-        </a>
-        <div class="nav-sub">
-          <div class="nav-sub__inner">
-            <a href="gjovikstranda.html">En digital Gjøvikstranda</a>
-            <a href="helseinn.html">HelseINN Læringsapp</a>
-            <a href="ntnusammen.html">NTNUconnect</a>
-            <a href="praksis.html">Prosjekter fra praksis</a>
-          </div>
-        </div>
+      <li class="has-drop">
+        <a href="index.html#prosjekter">Prosjekter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <ul class="drop">
+          <li><a href="gjovikstranda.html">En digital Gjøvikstranda</a></li>
+          <li><a href="helseinn.html">Læringsapp – HelseINN</a></li>
+          <li><a href="ntnusammen.html">NTNUconnect</a></li>
+          <li><a href="praksis.html">Prosjekter fra praksis</a></li>
+        </ul>
       </li>
-      <li><a href="index.html#kontakt">Kontakt</a></li>
     </ul>
-    <button class="navbar__hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="navbar__dropdown" id="dropdown">
+    <button class="nav-toggle" type="button" aria-label="Åpne meny" aria-expanded="false"><span></span></button>
+    <div class="nav-mobile">
       <a href="index.html">Hjem</a>
       <a href="index.html#om">Om meg</a>
       <a href="index.html#prosjekter">Prosjekter</a>
       <a href="index.html#kontakt">Kontakt</a>
     </div>
-  </nav>
+    <a href="index.html#kontakt" class="nav-cta">Kontakt</a>
+  </div>
+</header>
 
-  <header class="project-hero">
-    <img class="project-hero__img" src="images/helseinn.png" alt="HelseINN prosjekt">
-    <div class="project-hero__overlay"></div>
-    <div class="project-hero__content">
-      <p class="project-hero__label">App-design · Helse</p>
-      <h1 class="project-hero__title">HelseINN Læringsapp</h1>
+<main class="wrap">
+  <section class="p-hero">
+    <img src="images/helseinn.png" alt="Læringsapp – HelseINN">
+    <div class="p-hero-text">
+      <span class="script" aria-hidden="true">Prosjekt 02</span>
+      <h1 class="p-title">Læringsapp – HelseINN</h1>
+      <div class="p-tags">App-design ✦ Tjenestedesign</div>
     </div>
-  </header>
+  </section>
 
-  <div class="project-accent-bar"></div>
+  <a href="index.html#prosjekter" class="back">← Tilbake til prosjekter</a>
 
-  <a href="index.html#prosjekter" class="project-back">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-    Tilbake til prosjekter
-  </a>
-
-  <div class="project-meta">
-    <div class="project-meta__item">
-      <p class="project-meta__label">Oppdragsgiver</p>
-      <p class="project-meta__value">HelseINN</p>
-    </div>
-    <div class="project-meta__item">
-      <p class="project-meta__label">Fag</p>
-      <p class="project-meta__value">Tjenestedesign</p>
-    </div>
-    <div class="project-meta__item">
-      <p class="project-meta__label">Varighet</p>
-      <p class="project-meta__value">Januar – Mai 2024</p>
-    </div>
-    <div class="project-meta__item">
-      <p class="project-meta__label">Gruppemedlemmer</p>
-      <p class="project-meta__value">4 (interaksjonsdesignere)</p>
-    </div>
+  <div class="meta">
+    <div><span class="label">Oppdragsgiver</span><p>HelseINN</p></div>
+    <div><span class="label">Fag</span><p>App-design</p></div>
+    <div><span class="label">Varighet</span><p>Januar – mai 2025</p></div>
+    <div><span class="label">Gruppemedlemmer</span><p>4 interaksjonsdesignere</p></div>
   </div>
 
-  <div class="project-body">
+  <section class="p-section intro-grid">
+    <div>
+      <div class="p-head"><span class="script" aria-hidden="true">Om</span><h2>PROSJEKTET</h2></div>
+      <p>HelseINN Læring er et konsept for en læringsapp som skal gjøre læring om velferdsteknologi mer engasjerende og tilgjengelig for sykepleiestudenter. Målet var å skape en app som støtter læring gjennom kort, relevante og faglige moduler.</p>
+    </div>
+    <div class="quote">
+      <span class="mark" aria-hidden="true">“</span>
+      <blockquote>Hvordan kan vi gjøre læring om velferdsteknologi mer engasjerende og tilgjengelig for sykepleiestudenter?</blockquote>
+      <span class="label">Problemstilling</span>
+    </div>
+  </section>
 
-    <h2>Om prosjektet</h2>
-    <p>HelseINN, som er en digital helsetjeneste i Innlandet, har et konsept kalt mobilt visningshjem 
-      som er en koffert med velferdteknologi og utstyr for å vise muligheter, drive opplæring og for å teste og utvikle løsninger og tjenester. 
-      Utfordringen er å lage en tjeneste for drift av det mobile visningshjemmet som er brukervennlig 
-      og bærekraftig, som kan brukes under opplæring eller fremvisning. 
-    </p>
-
-    <h2>Min rolle</h2>
-    <ul class="process-methods">
-      <li>Deltok aktivt under innsiktsfasen</li>
+  <section class="p-section">
+    <div class="p-head"><span class="script" aria-hidden="true">Min</span><h2>ROLLE</h2></div>
+    <ul class="role-list">
+      <li>Research og innsikt</li>
+      <li>Interview og idegenerering</li>
       <li>Wireframes</li>
       <li>Prototyping</li>
-      <li>Design</li>
+      <li>Brukertesting</li>
+      <li>Visuell design</li>
     </ul>
+  </section>
 
-    <h2>Problemstilling</h2>
-    <p>Hvordan kan opplæringen i velferdsteknologi for helsestudenter forbedres for å effektivisere bruken i praksis?
-      Ettersom kofferten må inneholde mye teknologi og utstyr som skal vises fram, er det ikke 
-      alltid er like intuitivt hvordan man bruker eller forklarer om velferdsteknologien. For å unngå 
-      dette valgte vi å fokusere på hvordan opplæringen og utdanningen var rundt temaet velferdsteknologi, 
-      da særlig på NTNU Gjøvik. Researchen vår viste nemlig at mange av sykepleiestudentene på NTNU Gjøvik 
-      opplever velferdsteknologi som et tungt og lite interessant emne, samtidig som at pensumboka er på dansk. 
-    </p>
-
-    <h2>Løsning</h2>
-    <p>HelseINN Læring er en app som skal hjelpe studentene med opplæring av velferdsteknologi på den måten
-      de selv lærer best av. Den inneholder læringsmetoder som tradisjonell lesing, videoer man kan se,
-      lydbok man kan høre på og til slutt en «test deg selv». Fordelen er at man kan bruke appen akkurat slik
-      man ønsker, som bidrar til å øke kompetansen blant fremtidige ansatte, noe som gjør implementeringen av
-      velferdsteknologi enklere og mer effektiv. Samtidig forbedres både pasientsikkerheten og tjenestekvaliteten
-      fordi helsepersonell lærer å bruke teknologien på en trygg og korrekt måte. Prosjektet hadde flere iterasjoner
-      mellom de ulike fasene som er grunnen til at det kan oppleves som litt rotete.
-    </p>
-
-    <!-- FIGMA PROTOTYPE -->
-    <div class="proto-section proto-section--phone">
-      <div class="proto-frame">
-        <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/JcR42pQpQmBR5SJK0y1dTP/tjenestedesign-prototype?node-id=454-4&viewport=165%2C197%2C0.2&t=dnUCvDEpEjI7NJtN-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=454%3A4&page-id=454%3A2" width="100%" height="700" allowfullscreen></iframe>
-      </div>
-      <a href="https://www.figma.com/proto/JcR42pQpQmBR5SJK0y1dTP/tjenestedesign-prototype?node-id=454-4&viewport=165%2C197%2C0.2&t=dnUCvDEpEjI7NJtN-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=454%3A4&page-id=454%3A2" target="_blank" rel="noopener" class="btn btn--dark proto-btn">Åpne i Figma</a>
+  <section class="p-section">
+    <div class="p-head"><span class="script" aria-hidden="true">Vår</span><h2>PROSESS</h2></div>
+    <div class="steps">
+      <div class="step"><div class="dot">01</div><span>Utforske</span></div>
+      <div class="step"><div class="dot">02</div><span>Definere</span></div>
+      <div class="step"><div class="dot">03</div><span>Utvikle</span></div>
+      <div class="step"><div class="dot">04</div><span>Teste</span></div>
     </div>
 
-    <!-- PROSESS -->
-    <div class="process-section">
-      <h2>Prosess</h2>
-
-      <div class="dd-wrap">
-        <svg class="dd-svg" viewBox="0 0 740 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <polygon points="30,80 200,10 200,150" fill="var(--diamond-fill)" opacity="0.35"/>
-          <polygon points="200,10 370,80 200,150" fill="var(--diamond-fill)" opacity="0.72"/>
-          <polygon points="370,80 540,10 540,150" fill="var(--diamond-fill)" opacity="0.35"/>
-          <polygon points="540,10 710,80 540,150" fill="var(--diamond-fill)" opacity="0.72"/>
-          <circle cx="30" cy="80" r="5" fill="var(--diamond-fill)"/>
-          <circle cx="200" cy="10" r="5" fill="var(--diamond-fill)"/>
-          <circle cx="200" cy="150" r="5" fill="var(--diamond-fill)"/>
-          <circle cx="370" cy="80" r="5" fill="var(--diamond-fill)"/>
-          <circle cx="540" cy="10" r="5" fill="var(--diamond-fill)"/>
-          <circle cx="540" cy="150" r="5" fill="var(--diamond-fill)"/>
-          <circle cx="710" cy="80" r="5" fill="var(--diamond-fill)"/>
-        </svg>
-        <div class="dd-labels">
-          <span>Utforske</span>
-          <span>Definere</span>
-          <span>Utvikle</span>
-          <span>Teste</span>
+    <div class="phase">
+      <div class="num">01</div>
+      <div>
+        <h3>Utforske</h3>
+        <ul class="methods"><li>Desk research</li><li>Intervju</li><li>How might we</li></ul>
+        <p>Dette ledet oss til å utforske muligheten for en læringsapp om velferdsteknologi til sykepleiestudenter. Hovedmålet var å finne ut hvilke læringsbehov som eksisterer og hvordan vi kunne gjøre temaet mer engasjerende.</p>
+        <div class="p-gallery">
+          <img src="images/HelseINN/fase%203/How%20might%20we.png" alt="How might we">
+          <img src="images/HelseINN/fase%203/Skjermbilde%202026-05-14%20kl.%2014.34.23.png" alt="MoSCoW analyse">
         </div>
       </div>
-
-      <!-- Utforske -->
-      <div class="process-item fade-in">
-        <div class="process-item__text">
-          <span class="process-num">01</span>
-          <h3 class="process-title">Utforske</h3>
-          <ul class="process-methods">
-            <li>Aktørkart</li>
-            <li>Intervju</li>
-            <li>Affinitetsdiagram (Kunnskapsgrunnlaget til gruppen ble kartlagt)</li>
-            <li>Observasjon</li>
-          </ul>
-          <p class="process-result">For å kartlegge hvilke aktører som påvirkes direkte benyttet 
-            vi oss av metoden aktørkart, hvor da ansatte i kommunen var primærbrukere, og dermed 
-            de som påvirkes direkte. USHT (Utviklingssenter for sykehjem og hjemmetjenester) holdt 
-            en presentasjon som trakk fram viktigheten av opplæring, forankring og å skille tydelig 
-            mellom helse- og forbrukerteknologi. Dette ledet oss til den første problemstillingen: 
-            Hvordan kan vi sikre at kommuner og helsepersonell bruker velferdsteknologi på en effektiv 
-            og bærekraftig måte til sine brukere/innbyggere?  Etter å ha gjennomført metodene «Point of view» 
-            og «How might we», bestemte vi oss for å heller fokusere på steget før teknologien skal tas i bruk, 
-            altså opplæringen. Vi idemyldret rundt 100 ideer, hvor vi brukte octopus clusteirng for å se mønstrene 
-            og temaene (se bilde). Noen av ideene vi satt igjen med var opplæring, app og teknologi. 
-            Dette ledet oss til å utforske muligheten for en læringsapp om velferdsteknologi til sykepleiestudenter 
-            på NTNU Gjøvik. Vi benyttet oss av metoden «ti på gata» for å høre med studentene om hva de synes om en 
-            slik løsning, samt hvordan opplæringen faktisk foregår nå.
-          </p>
-        </div>
-        <div class="carousel">
-          <div class="carousel__slides">
-            <div class="carousel__slide active"><img src="images/HelseINN/fase%201/Skjermbilde%202026-05-14%20kl.%2014.28.28.png" alt="Afinnitydiagram av nåværende kunnskap i gruppen" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/HelseINN/fase%201/Skjermbilde%202026-05-14%20kl.%2014.29.31.png" alt="Aktørkart" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/HelseINN/fase%201/Skjermbilde%202026-05-14%20kl.%2014.30.51.png" alt="Idéworkshop" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/HelseINN/fase%202/Skjermbilde%202026-05-14%20kl.%2014.32.58.png" alt="Affinitydiagram av ideworkshopen" loading="lazy"></div>
-          </div>
-          <button class="carousel__btn carousel__btn--prev" aria-label="Forrige bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
-          <button class="carousel__btn carousel__btn--next" aria-label="Neste bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
-          <p class="carousel__caption">Affinitydiagram av nåværende kunnskap i gruppen</p>
-        </div>
-      </div>
-
-      <!-- Definere -->
-      <div class="process-item process-item--reverse fade-in">
-        <div class="process-item__text">
-          <span class="process-num">02</span>
-          <h3 class="process-title">Definere</h3>
-          <ul class="process-methods">
-            <li>Affinitetsdiagram</li>
-            <li>Point of view</li>
-            <li>User needs statements</li>
-            <li>Personas</li>
-            <li>Scenario</li>
-          </ul>
-          <p class="process-result">Under intervjuene med studentene kom det fram at emne om 
-            velferdsteknologi på sykepleiestudiet ikke var ett av favorittfagene, at det var 
-            lite fokus og at pensumboka var på dansk. Vi presenterte ideen vår om en læringsapp, 
-            basert på lignende ideer som Teoritentamen, og fikk god respons. Dette gjorde at 
-            problemstillingen fikk en iterasjon, hvor den nye versjonen ble: Hvordan kan opplæringen 
-            i velferdsteknologi for helsestudenter forbedres for å effektivisere bruken i praksis? 
-            Basert på svarene fra intervjuene, utviklet vi user needs statements der vi så på forskjellige 
-            situasjoner hvor løsningen vår kan benyttes. Videre lagde vi et tjenestekart som viste reisen til en 
-            helsestudent fra semesterstart til praksis. Slik ser man kontaktpunktene 
-            mellom bruker og løsning. Med dette som grunnlag utviklet vi en 
-            personas med et scenario som skulle demonstrere hvordan løsningen ville fungert i 
-            praksis for en sykepleierstudent. Scenarioet viser Stine som skal ha eksamen i faget 
-            teknologi i helsetjenesten, men lærer ikke noe av å lese tunge pensumbøker. Istedenfor 
-            bruker hun lydbokfunksjonen i appen mens hun går tur, som fungerer mye bedre.
-          </p>
-        </div>
-        <div class="carousel">
-          <div class="carousel__slides">
-            <div class="carousel__slide active"><img src="images/HelseINN/fase%202/Skjermbilde%202026-05-14%20kl.%2014.34.54.png" alt="Sortert innsikt etter intervjuene" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/HelseINN/fase%202/Skjermbilde%202026-05-14%20kl.%2014.35.38.png" alt="Tjenestekart" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/HelseINN/fase%202/personas.png" alt="Personas" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/HelseINN/fase%202/Point%20of%20view.png" alt="Point of view" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/HelseINN/fase%202/User%20needs%20statements.png" alt="User needs statements" loading="lazy"></div>
-          </div>
-          <button class="carousel__btn carousel__btn--prev" aria-label="Forrige bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
-          <button class="carousel__btn carousel__btn--next" aria-label="Neste bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
-          <p class="carousel__caption">Sortert innsikt etter intervjuene</p>
-        </div>
-      </div>
-
-      <!-- Develop -->
-      <div class="process-item fade-in">
-        <div class="process-item__text">
-          <span class="process-num">03</span>
-          <h3 class="process-title">Utvikle</h3>
-          <ul class="process-methods">
-            <li>How might we</li>
-            <li>Ideworkshop</li>
-            <li>Octopus clustering</li>
-            <li>Dot voting</li>
-            <li>Tjenestekart</li>
-            <li>MoSCoW</li>
-            <li>Wireframes</li>
-            <li>Low fidelity prototype</li>
-            <li>High fidelity prototype</li>
-          </ul>
-          <p class="process-result">For å utforske hvilket innhold en slik app 
-            burde ha brukte vi moscow analyse hvor vi kom fram til at den skal 
-            inkludere blant annet teorikurs, lydbok, opplæringsvideoer og test 
-            deg selv. HelseINN Læring, ble en app som gjør læring om velferdsteknologi mer engasjerende og 
-            tilgjengelig for sykepleiestudenter. Appen gir flere fordeler til 
-            studentene ved å tilby tilpassede læringsmetoder, dermed forbedret læring 
-            og kan gi sterkere følelse av mestring. Vi tok inspirasjon fra lignende 
-            konsepter og utviklet wireframes samt ulike prototyper. Appen tar utgangspunkt 
-            i HelseINN’s grafiske profil og ble brukt for å engasjere og gjøre appen mer 
-            spennende for studentene. 
-          </p>
-        </div>
-        <div class="carousel">
-          <div class="carousel__slides">
-            <div class="carousel__slide active"><img src="images/HelseINN/fase%203/Skjermbilde%202026-05-14%20kl.%2014.34.23.png" alt="MoSCoW analyse" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/HelseINN/fase%203/How%20might%20we.png" alt="How might we" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/HelseINN/fase%203/Wireframes.png" alt="Wireframes" loading="lazy"></div>
-            <div class="carousel__slide"><img src="images/HelseINN/fase%203/High%20fidelity.png" alt="High fidelity prototype" loading="lazy"></div>
-          </div>
-          <button class="carousel__btn carousel__btn--prev" aria-label="Forrige bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
-          <button class="carousel__btn carousel__btn--next" aria-label="Neste bilde"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
-          <p class="carousel__caption">MoSCoW analyse</p>
-        </div>
-      </div>
-
-      <!-- Teste -->
-      <div class="process-item process-item--reverse fade-in">
-        <div class="process-item__text">
-          <span class="process-num">04</span>
-          <h3 class="process-title">Teste</h3>
-          <ul class="process-methods">
-            <li>Brukertesting</li>
-          </ul>
-          <p class="process-result">Appen ble svært lite brukertestet på bakgrunn av 
-            tidsaspektet, men det vi eventuelt kan basere oss på er at lignende løsninger som teoritentamen 
-            har gitt svært gode resultater. Under intervjuene fikk vi også høre at en 
-            slik løsning kan være et godt tiltak for å gjøre temaet mer engasjerende 
-            under utdanningen.
-          </p>
-        </div>
-        <div class="process-item__visual" aria-hidden="true">
-          <span class="process-visual-num">04</span>
-        </div>
-      </div>
-
-    </div><!-- /process-section -->
-
-    <h2>Refleksjoner</h2>
-    <p>Etter iterering av problemstilling ble gruppen svært ivrige på å utforske løsninger, og det var lett å bli revet med i idémyldringen. 
-      Dette førte til at vi ble litt ivrige og konkluderte med en løsning på problemet før vi egentlig hadde forstått problemet godt nok. 
-      Vi burde ha lagt idenee om løsning til side, og heller tatt de opp igjen i utviklingsfasen. 
-    </p>
-  
-
-  </div><!-- /project-body -->
-
-  <footer class="footer">
-    <p class="footer__copy">© 2026 Solveig Aanderaa</p>
-    <div class="footer__social">
-      <a href="mailto:solveig.aanderaa@gmail.com" aria-label="E-post">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      </a>
-      <a href="https://linkedin.com/in/solveig-aanderaa" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-      <a href="https://www.instagram.com/solveig_aanderaa/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-      </a>
     </div>
-  </footer>
 
-  <a href="#" class="back-to-top" id="backToTop" aria-label="Til toppen">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
-  </a>
+    <div class="phase">
+      <div class="num">02</div>
+      <div>
+        <h3>Definere</h3>
+        <ul class="methods"><li>Personas</li><li>Idéworkshop</li><li>MoSCoW</li></ul>
+        <p>Vi identifiserte behov som tilpassede læringsmetoder, bedre struktur og mer tilgjengelig innhold. Det var tydelig at en app kunne gjøre læringen mer engasjerende og tilpasset studentenes hverdag.</p>
+      </div>
+    </div>
 
-  <script src="script.js"></script>
+    <div class="phase">
+      <div class="num">03</div>
+      <div>
+        <h3>Utvikle</h3>
+        <ul class="methods"><li>Wireframes</li><li>Low fidelity</li><li>High fidelity</li></ul>
+        <p>For å utforske hvilket innhold en slik app burde ha, brukte vi MoSCoW-analysen og utviklet wireframes og prototyper. Appen tok utgangspunkt i HelseINNs grafiske profil og var designet for å være spillende, engasjerende og læringsfremmende.</p>
+        <div class="p-gallery">
+          <img src="images/HelseINN/fase%203/Wireframes.png" alt="Wireframes">
+          <img src="images/HelseINN/fase%203/High%20fidelity.png" alt="High fidelity prototype">
+        </div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="num">04</div>
+      <div>
+        <h3>Teste</h3>
+        <ul class="methods"><li>Brukertesting</li></ul>
+        <p>Appen ble svært lite brukertestet på bakgrunn av tidsaspektet, men vi kunne se at lignende løsninger som teoritentamen har gitt gode resultater. Under intervjuene fikk vi høre at en slik løsning kan være et godt tiltak for å gjøre temaet mer engasjerende.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-section">
+    <div class="p-head"><span class="script" aria-hidden="true">Mine</span><h2>REFLEKSJONER</h2></div>
+    <p>Etter iterering av problemstilling ble gruppen svært ivrige på å utforske løsninger, og det var lett å bli revet med i idémyldringen. Dette førte til at vi ble litt for raske og konkluderte med en løsning før vi egentlig hadde forstått problemet godt nok.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span class="nav-logo">SA</span>
+    <span class="label">✦ © 2026 Solveig Aanderaa</span>
+    <a href="#hjem" class="label">Til toppen ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
